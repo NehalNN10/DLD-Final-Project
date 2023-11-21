@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Nov 21 10:47:09 2023
+# Process ID: 12804
+# Current directory: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/synth_1/Top.vds
+# Journal file: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace
+Command: synth_design -top Top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4724
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1027.352 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Top.v:14]
+	Parameter CORDW bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'VGA_Clock' [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/synth_1/.Xil/Vivado-12804-CTRL-ALT-DEL/realtime/VGA_Clock_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Clock' (1#1) [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/synth_1/.Xil/Vivado-12804-CTRL-ALT-DEL/realtime/VGA_Clock_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'VGA_Timing' [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/VGA_Timing.v:14]
+	Parameter HA_END bound to: 639 - type: integer 
+	Parameter HS_STA bound to: 655 - type: integer 
+	Parameter HS_END bound to: 751 - type: integer 
+	Parameter LINE bound to: 799 - type: integer 
+	Parameter VA_END bound to: 479 - type: integer 
+	Parameter VS_STA bound to: 489 - type: integer 
+	Parameter VS_END bound to: 491 - type: integer 
+	Parameter SCREEN bound to: 524 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'VGA_Timing' (2#1) [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/VGA_Timing.v:14]
+INFO: [Synth 8-6157] synthesizing module 'maze_draw' [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/maze_draw.v:22]
+	Parameter BlobWidth bound to: 400 - type: integer 
+	Parameter BlobHeight bound to: 200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'maze_draw' (3#1) [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/maze_draw.v:22]
+ERROR: [Synth 8-685] variable 'vga_r' should not be used in output port connection [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Top.v:77]
+ERROR: [Synth 8-6156] failed synthesizing module 'Top' [C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Top.v:14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1027.352 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 21 10:47:35 2023...

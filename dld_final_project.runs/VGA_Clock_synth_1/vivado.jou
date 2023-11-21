@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Nov 17 12:40:40 2023
+# Process ID: 26740
+# Current directory: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/VGA_Clock_synth_1
+# Command line: vivado.exe -log VGA_Clock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGA_Clock.tcl
+# Log file: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/VGA_Clock_synth_1/VGA_Clock.vds
+# Journal file: C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.runs/VGA_Clock_synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGA_Clock.tcl -notrace
