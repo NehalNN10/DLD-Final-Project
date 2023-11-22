@@ -14,11 +14,16 @@
 module Top(
     input  wire clk_100m,                   // 100 MHz clock
     input  wire btn_rst_n,                  // reset button
+    input wire btnR, // right button
+    input wire btnL, //left button 
+    input wire btnU,
+    input wire btnD,
+    input wire restart,
     output wire vga_hsync,                  // VGA horizontal sync
     output wire vga_vsync,                  // VGA vertical sync
-    output reg [3:0] vga_r,                 // 4-bit VGA red
-    output reg [3:0] vga_g,                 // 4-bit VGA green
-    output reg [3:0] vga_b                  // 4-bit VGA blue
+    output wire [3:0] vga_r,                 // 4-bit VGA red
+    output wire [3:0] vga_g,                 // 4-bit VGA green
+    output wire [3:0] vga_b                  // 4-bit VGA blue
     );
 
     // Instantiate VGA_Clock
@@ -76,7 +81,12 @@ module Top(
         .video_on(de),
         .red(vga_r),
         .green(vga_g),
-        .blue(vga_b)
+        .blue(vga_b),
+        .btnR(btnR),
+        .btnL(btnL),
+        .btnU(btnU),
+        .btnD(btnD),
+        .rstBtn(restart)
     );
     
     // VGA Output
