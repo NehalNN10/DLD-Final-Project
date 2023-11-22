@@ -114,10 +114,6 @@ always @(posedge clk_d) begin
             blue <= 4'h0;
             end
         else begin
-        
-//        if(pixel_x[5] ^ pixel_y[5]) begin
-//            checkerboard_pattern <= 1'b1;
-//        end else begin
             red <= ((video_on & m1)|| (video_on & m2) || (video_on & m3) || (video_on & m4)) ? 4'hF : 4'h0;
             green <= (video_on & d1) ? 4'hF : 4'h0;
             blue <= (video_on & m5) ? 4'hF :4'h0;
@@ -135,7 +131,7 @@ always @(posedge clk_d) begin
              if (sig_down == 1 && ~collisionD) // Check for left button
                 DenialY<=DenialY+1;
         end 
-        if (restart == 1)
+        if (restart == 1 || (DenialX+DenialWidth==590 & (DenialY<=150 & DenialY+DenialHeight>=100)))
             begin
                 DenialX <= 0;
                 DenialY <= 300;
