@@ -48,6 +48,26 @@ module maze_draw(
     
     wire restart;
     
+    wire [1:0] PeterOn;
+    wire [7:0] dout; 
+    
+    //Peter
+    PeterSprite Peter(
+        .clk_pix(clk_d),
+        .sx(pixel_x),
+        .sy(pixel_y),
+        .de(video_on),
+        .PSpriteOn(PeterOn),
+        .dataout(dout)
+    );
+    
+    // Load colour palette
+    reg [7:0] palette [0:83];              // 8 bit values from the 192 hex entries in the colour palette
+    reg [7:0] COL = 0;                      // background colour palette value
+    initial begin
+        $readmemh("pal24bit.mem", palette); // load 192 hex values into "palette"
+    end   
+    
     Debounce deb_right (
     .clk_pix(clk_d),
     .btn(btnR),
@@ -117,6 +137,18 @@ always @(posedge clk_d) begin
             red <= ((video_on & m1)|| (video_on & m2) || (video_on & m3) || (video_on & m4)) ? 4'hF : 4'h0;
             green <= (video_on & d1) ? 4'hF : 4'h0;
             blue <= (video_on & m5) ? 4'hF :4'h0;
+//            if (PeterOn==1)
+//                    begin
+//                        red <= (palette[(dout*3)])>>4;    // RED bits(7:4) from colour palette
+//                        green <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+//                        blue <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+//                    end
+//                else
+//                    begin
+//                        red <= (palette[(COL*3)])>>4;     // RED bits(7:4) from colour palette
+//                        green <= (palette[(COL*3)+1])>>4;   // GREEN bits(7:4) from colour palette
+//                        blue <= (palette[(COL*3)+2])>>4;   // BLUE bits(7:4) from colour palette
+//                    end
         end
         if (pixel_x==639 && pixel_y==479) // check for movement once every frame
              begin 
@@ -130,7 +162,32 @@ always @(posedge clk_d) begin
              else
              if (sig_down == 1 && ~collisionD) // Check for left button
                 DenialY<=DenialY+1;
-        end 
+        end
+        
+        /*
+        if(de)
+            begin
+                if (MazeSpriteOn==1)
+                    begin
+                        vga_r <= (palette[(dout*3)])>>4;    // RED bits(7:4) from colour palette
+                        vga_g <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                        vga_b <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                    end
+                else
+                    begin
+                        vga_r <= (palette[(COL*3)])>>4;     // RED bits(7:4) from colour palette
+                        vga_g <= (palette[(COL*3)+1])>>4;   // GREEN bits(7:4) from colour palette
+                        vga_b <= (palette[(COL*3)+2])>>4;   // BLUE bits(7:4) from colour palette
+                    end
+            end
+        else
+            begin
+                vga_r <= 0; // set RED, GREEN & BLUE
+                vga_g <= 0; // to "0" when x,y outside of
+                vga_b <= 0; // the active display area
+            end
+        */
+        
         if (restart == 1 || (DenialX+DenialWidth==590 & (DenialY<=150 & DenialY+DenialHeight>=100)))
             begin
                 DenialX <= 0;
