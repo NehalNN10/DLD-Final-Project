@@ -19,7 +19,7 @@ module PeterSprite(
     );
 
     // instantiate BeeRom code
-    reg [9:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    reg [10:0] address; // 2^10 or 1024, need 34 x 27 = 918
     PeterRom PRom (
         .address(address),
         .clk_pix(clk_pix),
