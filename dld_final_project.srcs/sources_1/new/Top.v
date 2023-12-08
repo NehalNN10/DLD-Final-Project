@@ -21,9 +21,9 @@ module Top(
     input wire restart,
     output wire vga_hsync,                  // VGA horizontal sync
     output wire vga_vsync,                  // VGA vertical sync
-    output wire [3:0] vga_r,                 // 4-bit VGA red
-    output wire [3:0] vga_g,                 // 4-bit VGA green
-    output wire [3:0] vga_b                  // 4-bit VGA blue
+    output reg [3:0] vga_r,                 // 4-bit VGA red
+    output reg [3:0] vga_g,                 // 4-bit VGA green
+    output reg [3:0] vga_b                  // 4-bit VGA blue
     );
 
     // Instantiate VGA_Clock
@@ -45,6 +45,11 @@ module Top(
     wire hsync; 
     wire vsync; 
     wire de;
+    
+    wire [3:0] maze_red;
+    wire [3:0] maze_blue;
+    wire [3:0] maze_green;
+    
     VGA_Timing display_inst (
         .clk_pix(clk_pix),
         .rst_pix(!clk_pix_locked),          // wait for clock lock
@@ -54,40 +59,66 @@ module Top(
         .vsync(vsync),
         .de(de)
     );
-       
-//    // Instantiate BeeSprite
-//    wire [1:0] MazeSpriteOn;                 // 1=on, 0=off
-//    wire [7:0] dout;                        // pixel value from Bee.mem
-//    MazeSprite MazeDisplay (
-//        .clk_pix(clk_pix),
-//        .sx(sx),
-//        .sy(sy),
-//        .de(de),
-//        .MazeSpriteOn(MazeSpriteOn),
-//        .dataout(dout)
-//    );
-  
-//    // Load colour palette
-//    reg [7:0] palette [0:83];              // 8 bit values from the 192 hex entries in the colour palette
-//    reg [7:0] COL = 0;                      // background colour palette value
-//    initial begin
-//        $readmemh("pal24bit.mem", palette); // load 192 hex values into "palette"
-//    end   
-    
+
     maze_draw m1(
         .clk_d(clk_pix),
         .pixel_x(sx),
         .pixel_y(sy),
         .video_on(de),
-        .red(vga_r),
-        .green(vga_g),
-        .blue(vga_b),
+        .red(maze_red),
+        .green(maze_green),
+        .blue(maze_blue)
+    );
+    
+    // Instantiate BeeSprite
+    wire [1:0] BeeSpriteOn;                 // 1=on, 0=off
+    wire [7:0] dout;                        // pixel value from Bee.mem
+    PeterSprite BeeDisplay (
+        .clk_pix(clk_pix),
+        .sx(sx),
+        .sy(sy),
+        .de(de),
         .btnR(btnR),
         .btnL(btnL),
         .btnU(btnU),
         .btnD(btnD),
-        .rstBtn(restart)
+        .rstBtn(restart),
+        .BeeSpriteOn(BeeSpriteOn),
+        .dataout(dout)
     );
+    
+    // Load colour palette
+    reg [7:0] palette [0:122];              // 8 bit values from the 192 hex entries in the colour palette
+    reg [7:0] COL = 0;                      // background colour palette value
+    initial begin
+        $readmemh("otherpal24bit.mem", palette); // load 192 hex values into "palette"
+    end   
+    
+    // VGA Output
+    always @ (posedge clk_pix)
+    begin
+        if(de)
+            begin
+                if (BeeSpriteOn==1)
+                    begin
+                        vga_r <= (palette[(dout*3)])>>4;    // RED bits(7:4) from colour palette
+                        vga_g <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                        vga_b <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                    end
+                else
+                    begin
+                        vga_r <= maze_red;
+                        vga_g <= maze_green;
+                        vga_b <= maze_blue;
+                    end
+            end
+        else
+            begin
+                vga_r <= 0; // set RED, GREEN & BLUE
+                vga_g <= 0; // to "0" when x,y outside of
+                vga_b <= 0; // the active display area
+            end
+    end
     
     // VGA Output
     assign vga_hsync = hsync;

@@ -14,41 +14,100 @@ module PeterSprite(
     input wire [9:0] sx, 
     input wire [9:0] sy,
     input wire de,
-    output reg [1:0] PSpriteOn, // 1=on, 0=off
+    input wire btnR, // right button
+    input wire btnL, //left button 
+    input wire btnU, // up button
+    input wire btnD, // down button
+    input wire rstBtn,
+    output reg [1:0] BeeSpriteOn, // 1=on, 0=off
     output wire [7:0] dataout
     );
 
     // instantiate BeeRom code
-    reg [10:0] address; // 2^10 or 1024, need 34 x 27 = 918
-    PeterRom PRom (
+    reg [9:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    PeterRom BeeVRom (
         .address(address),
         .clk_pix(clk_pix),
         .dataout(dataout)
     );
     
+    // Instantiate Debounce
+    wire sig_right;
+    wire sig_left;
+    wire sig_up;
+    wire sig_down;
+//    wire de;
+    wire restart;
+    
+    Debounce deb_right (
+    .clk_pix(clk_pix),
+    .btn(btnR),
+    .out(sig_right)
+    );
+    Debounce deb_left (
+    .clk_pix(clk_pix),
+    .btn(btnL),
+    .out(sig_left)
+    );
+    Debounce deb_up (
+    .clk_pix(clk_pix),
+    .btn(btnU),
+    .out(sig_up)
+    );
+    Debounce deb_down (
+    .clk_pix(clk_pix),
+    .btn(btnD),
+    .out(sig_down)
+    );
+    Debounce deb_rst(
+    .clk_pix(clk_pix), 
+    .btn(rstBtn),
+    .out(restart)
+    );
+    
     // setup character positions and sizes
-    reg [9:0] PX = 0; // Bee X start position
-    reg [8:0] PY = 300; // Bee Y start position
-    localparam PWidth = 30; // Bee width in pixels
-    localparam PHeight = 30; // Bee height in pixels
+    reg [9:0] BeeX = 10; // Bee X start position
+    reg [8:0] BeeY = 300; // Bee Y start position
+    localparam BeeWidth = 30; // Bee width in pixels
+    localparam BeeHeight = 30; // Bee height in pixels
+    localparam BeeSpeedX = 3;
+    localparam BeeSpeedY = 3;
     
     // check if sx,sy are within the confines of the Bee character
     always @ (posedge clk_pix)
     begin
         if(de)
             begin
-                if(sx==PX-2 && sy==PY)  // sx=295
+                if(sx==BeeX && sy==BeeY)  // sx=295
                     begin
                         address <= 0;       // 1st Entry: address = 0
-                        PSpriteOn <=1;
+                        BeeSpriteOn <=1;
                     end
-                if((sx>PX-2) && (sx<PX+PWidth-1) && (sy>PY-1) && (sy<PY+PHeight)) // sx = 296 to 329 = 33 Entries
+                if((sx>BeeX) && (sx<BeeX+BeeWidth-1) && (sy>BeeY-1) && (sy<BeeY+BeeHeight)) // sx = 296 to 329 = 33 Entries
                     begin
-                        address <= (sx+2-PX) + ((sy-PY)*PWidth); // 2nd Entry: address = 296 + 2 - 297 = 1
-                        PSpriteOn <=1;
+                        address <= (sx-BeeX) + ((sy-BeeY)*BeeWidth); // 2nd Entry: address = 296 + 2 - 297 = 1
+                        BeeSpriteOn <=1;
                     end
                 else
-                    PSpriteOn <=0;
+                    BeeSpriteOn <=0;
             end
+        if (sx==639 && sy==479) // check for movement once every frame
+             begin 
+             if (sig_right == 1 && BeeX<640-BeeWidth) // Check for right button
+                BeeX<=BeeX+BeeSpeedX;
+             else
+             if (sig_left == 1 && BeeX>0) // Check for left button
+                BeeX<=BeeX-BeeSpeedX;
+             if (sig_up == 1 && BeeY > 0) // Check for right button
+                BeeY<=BeeY-BeeSpeedY;
+             else
+             if (sig_down == 1 && BeeY<480 - BeeHeight) // Check for left button
+                BeeY<=BeeY+BeeSpeedY;
+            end
+      if (restart)
+        begin
+            BeeX <= 0;
+            BeeY <= 300;
+        end
     end
 endmodule
