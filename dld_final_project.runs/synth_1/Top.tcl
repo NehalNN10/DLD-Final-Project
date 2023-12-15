@@ -105,6 +105,8 @@ read_mem {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_start_game_screen.mem
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_spiderman.mem
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/spiderman.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_diamond.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/diamond.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Top.v
@@ -134,6 +136,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/yl_rom.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Spiderman.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/SpiderROM.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Diamond.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/DiamondRom.v
 }
 read_ip -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xci
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock_board.xdc]

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Fri Dec 15 12:54:20 2023
+| Date             : Fri Dec 15 13:26:30 2023
 | Host             : CTRL-ALT-DEL running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.191        |
+| Total On-Chip Power (W)  | 0.192        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.119        |
+| Dynamic (W)              | 0.120        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        5 |       --- |             --- |
-| Slice Logic    |    <0.001 |     1116 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      695 |     20800 |            3.34 |
-|   CARRY4       |    <0.001 |       45 |      8150 |            0.55 |
-|   Register     |    <0.001 |      173 |     41600 |            0.42 |
-|   Others       |     0.000 |       21 |       --- |             --- |
-| Signals        |    <0.001 |      997 |       --- |             --- |
-| Block RAM      |    <0.001 |      0.5 |        50 |            1.00 |
+| Slice Logic    |    <0.001 |     1341 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      878 |     20800 |            4.22 |
+|   CARRY4       |    <0.001 |       51 |      8150 |            0.63 |
+|   Register     |    <0.001 |      181 |     41600 |            0.44 |
+|   Others       |     0.000 |       24 |       --- |             --- |
+| Signals        |    <0.001 |     1228 |       --- |             --- |
+| Block RAM      |    <0.001 |        1 |        50 |            2.00 |
 | MMCM           |     0.117 |        1 |         5 |           20.00 |
 | I/O            |    <0.001 |       22 |       106 |           20.75 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.191 |          |           |                 |
+| Total          |     0.192 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.011 |       0.001 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.011 |       0.002 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.078 |       0.065 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,7 +144,7 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
-| Top              |     0.119 |
+| Top              |     0.120 |
 |   clock_pix_inst |     0.118 |
 |     inst         |     0.118 |
 +------------------+-----------+
