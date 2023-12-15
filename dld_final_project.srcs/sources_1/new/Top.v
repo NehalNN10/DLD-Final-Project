@@ -19,6 +19,7 @@ module Top(
     input wire btnU,
     input wire btnD,
     input wire restart,
+    input wire startGame,
     output wire vga_hsync,                  // VGA horizontal sync
     output wire vga_vsync,                  // VGA vertical sync
     output reg [3:0] vga_r,                 // 4-bit VGA red
@@ -65,15 +66,39 @@ module Top(
         .pixel_x(sx),
         .pixel_y(sy),
         .video_on(de),
+//        .btnR(btnR),
+//        .btnL(btnL),
+//        .btnU(btnU),
+//        .btnD(btnD),
+//        .rstBtn(restart),
         .red(maze_red),
         .green(maze_green),
         .blue(maze_blue)
     );
     
     // Instantiate BeeSprite
+//    wire [1:0] startOn;                 // 1=on, 0=off
+//    wire [7:0] dout_2;                        // pixel value from Bee.mem
+//    StartGame start(
+//        .clk_pix(clk_pix),
+//        .sx(sx),
+//        .sy(sy),
+//        .de(de),
+//        .screenOn(startOn),
+//        .dataout(dout_2)
+//    );
+    
+    // Load colour palette
+//    reg [7:0] start_palette [0:764];              // 8 bit values from the 192 hex entries in the colour palette
+//    reg [7:0] COL2 = 0;                      // background colour palette value
+//    initial begin
+//        $readmemh("pal_start_game.mem", start_palette); // load 192 hex values into "palette"
+//    end
+    
+    // Instantiate BeeSprite
     wire [1:0] BeeSpriteOn;                 // 1=on, 0=off
     wire [7:0] dout;                        // pixel value from Bee.mem
-    PeterSprite BeeDisplay (
+    Spiderman BeeDisplay (
         .clk_pix(clk_pix),
         .sx(sx),
         .sy(sy),
@@ -83,15 +108,16 @@ module Top(
         .btnU(btnU),
         .btnD(btnD),
         .rstBtn(restart),
+//        .gameStart(startGame),
         .BeeSpriteOn(BeeSpriteOn),
         .dataout(dout)
     );
     
     // Load colour palette
-    reg [7:0] palette [0:122];              // 8 bit values from the 192 hex entries in the colour palette
+    reg [7:0] palette [0:62];              // 8 bit values from the 192 hex entries in the colour palette
     reg [7:0] COL = 0;                      // background colour palette value
     initial begin
-        $readmemh("otherpal24bit.mem", palette); // load 192 hex values into "palette"
+        $readmemh("pal_spiderman.mem", palette); // load 192 hex values into "palette"
     end   
     
     // VGA Output
@@ -99,18 +125,25 @@ module Top(
     begin
         if(de)
             begin
-                if (BeeSpriteOn==1)
-                    begin
-                        vga_r <= (palette[(dout*3)])>>4;    // RED bits(7:4) from colour palette
-                        vga_g <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
-                        vga_b <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
-                    end
-                else
-                    begin
-                        vga_r <= maze_red;
-                        vga_g <= maze_green;
-                        vga_b <= maze_blue;
-                    end
+                if(startGame)
+                    if (BeeSpriteOn==1)
+                        begin
+                            vga_r <= (palette[(dout*3)])>>4;    // RED bits(7:4) from colour palette
+                            vga_g <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                            vga_b <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                        end
+                    else
+                        begin
+                            vga_r <= maze_red;
+                            vga_g <= maze_green;
+                            vga_b <= maze_blue;
+                        end
+//                else
+//                    begin
+//                        vga_r <= (start_palette[(dout_2*3)])>>4;    // RED bits(7:4) from colour palette
+//                        vga_g <= (start_palette[(dout_2*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+//                        vga_b <= (start_palette[(dout_2*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+//                    end
             end
         else
             begin

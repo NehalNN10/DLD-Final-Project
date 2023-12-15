@@ -42,3 +42,6 @@ set_property PACKAGE_PIN T18 [get_ports btnU]
 set_property PACKAGE_PIN U18 [get_ports restart]
 set_property IOSTANDARD LVCMOS33 [get_ports restart]
 
+
+set_property IOSTANDARD LVCMOS33 [get_ports startGame]
+set_property PACKAGE_PIN W13 [get_ports startGame]

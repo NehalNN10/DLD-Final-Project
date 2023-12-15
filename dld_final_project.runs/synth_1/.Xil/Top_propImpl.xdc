@@ -46,3 +46,5 @@ set_property src_info {type:XDC file:2 line:40 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN T18 [get_ports btnU]
 set_property src_info {type:XDC file:2 line:42 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U18 [get_ports restart]
+set_property src_info {type:XDC file:2 line:47 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W13 [get_ports startGame]

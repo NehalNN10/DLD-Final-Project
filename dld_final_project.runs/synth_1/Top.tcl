@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -97,6 +96,14 @@ read_mem {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/otherpal24bit.mem
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/Pal24bit.mem
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/Bee.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/youlose.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_you_win.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/start_game_screen.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_you_lose.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/you_win.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_start_game_screen.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal_spiderman.mem
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/spiderman.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Top.v
@@ -118,6 +125,14 @@ read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/PetahDraw.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/BeeSprite.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/BeeRom.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/YouLoseScreen.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/YouWinScreen.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/StartGame.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/yw_rom.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/start_rom.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/yl_rom.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Spiderman.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/SpiderROM.v
 }
 read_ip -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xci
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock_board.xdc]

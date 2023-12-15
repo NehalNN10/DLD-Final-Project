@@ -83,38 +83,40 @@ module PeterSprite(
     // check if sx,sy are within the confines of the Bee character
     always @ (posedge clk_pix)
     begin
-        if(de)
+//        if(gameStart)
+            if(de)
+                begin
+                    if(sx==BeeX && sy==BeeY)  // sx=295
+                        begin
+                            address <= 0;       // 1st Entry: address = 0
+                            BeeSpriteOn <=1;
+                        end
+                    if((sx>BeeX) && (sx<BeeX+BeeWidth-1) && (sy>BeeY-1) && (sy<BeeY+BeeHeight)) // sx = 296 to 329 = 33 Entries
+                        begin
+                            address <= (sx-BeeX) + ((sy-BeeY)*BeeWidth); // 2nd Entry: address = 296 + 2 - 297 = 1
+                            BeeSpriteOn <=1;
+                        end
+                    else
+                        BeeSpriteOn <=0;
+                end
+            if (sx==639 && sy==479) // check for movement once every frame
+                 begin 
+                 if (sig_right == 1 && ~collisionR) // Check for right button
+                    BeeX<=BeeX+BeeSpeedX;
+                 else
+                 if (sig_left == 1 && ~collisionL) // Check for left button
+                    BeeX<=BeeX-BeeSpeedX;
+                 if (sig_up == 1 && ~collisionU) // Check for right button
+                    BeeY<=BeeY-BeeSpeedY;
+                 else
+                 if (sig_down == 1 && ~collisionD) // Check for left button
+                    BeeY<=BeeY+BeeSpeedY;
+                end
+          if (restart)
             begin
-                if(sx==BeeX && sy==BeeY)  // sx=295
-                    begin
-                        address <= 0;       // 1st Entry: address = 0
-                        BeeSpriteOn <=1;
-                    end
-                if((sx>BeeX) && (sx<BeeX+BeeWidth-1) && (sy>BeeY-1) && (sy<BeeY+BeeHeight)) // sx = 296 to 329 = 33 Entries
-                    begin
-                        address <= (sx-BeeX) + ((sy-BeeY)*BeeWidth); // 2nd Entry: address = 296 + 2 - 297 = 1
-                        BeeSpriteOn <=1;
-                    end
-                else
-                    BeeSpriteOn <=0;
+                BeeX <= 0;
+                BeeY <= 25;
             end
-        if (sx==639 && sy==479) // check for movement once every frame
-             begin 
-             if (sig_right == 1 && ~collisionR) // Check for right button
-                BeeX<=BeeX+BeeSpeedX;
-             else
-             if (sig_left == 1 && ~collisionL) // Check for left button
-                BeeX<=BeeX-BeeSpeedX;
-             if (sig_up == 1 && ~collisionU) // Check for right button
-                BeeY<=BeeY-BeeSpeedY;
-             else
-             if (sig_down == 1 && ~collisionD) // Check for left button
-                BeeY<=BeeY+BeeSpeedY;
-            end
-      if (restart)
-        begin
-            BeeX <= 0;
-            BeeY <= 25;
         end
-    end
+//    end
 endmodule
