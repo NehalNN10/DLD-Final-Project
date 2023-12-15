@@ -1,0 +1,1607 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec 15 12:54:20 2023
+| Host         : CTRL-ALT-DEL running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
+| Design       : Top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (6)
+6. checking no_output_delay (14)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (6)
+------------------------------
+ There are 6 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (14)
+--------------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     28.839        0.000                      0                  358        0.149        0.000                      0                  358        3.000        0.000                       0                   180  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                 Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                 ------------       ----------      --------------
+sys_clk_pin           {0.000 5.000}      10.000          100.000         
+  clk_pix_VGA_Clock   {0.000 19.841}     39.683          25.200          
+  clkfbout_VGA_Clock  {0.000 25.000}     50.000          20.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin                                                                                                                                                             3.000        0.000                       0                     1  
+  clk_pix_VGA_Clock        28.839        0.000                      0                  358        0.149        0.000                      0                  358       19.341        0.000                       0                   176  
+  clkfbout_VGA_Clock                                                                                                                                                   47.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_100m }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_pix_VGA_Clock
+  To Clock:  clk_pix_VGA_Clock
+
+Setup :            0  Failing Endpoints,  Worst Slack       28.839ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.149ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       19.341ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             28.839ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[3]/C
+                            (rising edge-triggered cell FDSE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeY_reg[4]/D
+                            (rising edge-triggered cell FDSE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.430ns  (logic 1.580ns (15.149%)  route 8.850ns (84.851%))
+  Logic Levels:           7  (LUT4=1 LUT5=1 LUT6=5)
+  Clock Path Skew:        0.000ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.480ns = ( 38.202 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.879ns
+    Clock Pessimism Removal (CPR):    0.602ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.633    -0.879    BeeDisplay/clk_pix
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y40          FDSE (Prop_fdse_C_Q)         0.456    -0.423 r  BeeDisplay/BeeY_reg[3]/Q
+                         net (fo=87, routed)          2.548     2.126    BeeDisplay/BeeY_reg[8]_0[3]
+    SLICE_X11Y46         LUT4 (Prop_lut4_I2_O)        0.150     2.276 f  BeeDisplay/i__carry_i_11/O
+                         net (fo=21, routed)          1.252     3.528    BeeDisplay/i__carry_i_11_n_0
+    SLICE_X12Y41         LUT6 (Prop_lut6_I5_O)        0.326     3.854 f  BeeDisplay/BeeY[8]_i_20/O
+                         net (fo=3, routed)           1.278     5.132    BeeDisplay/deb_up/BeeY[8]_i_53_3
+    SLICE_X14Y37         LUT6 (Prop_lut6_I4_O)        0.124     5.256 f  BeeDisplay/deb_up/BeeY[8]_i_134/O
+                         net (fo=1, routed)           0.466     5.722    BeeDisplay/deb_up/BeeY[8]_i_134_n_0
+    SLICE_X14Y37         LUT6 (Prop_lut6_I2_O)        0.124     5.846 f  BeeDisplay/deb_up/BeeY[8]_i_53/O
+                         net (fo=1, routed)           0.811     6.657    BeeDisplay/deb_up/BeeY[8]_i_53_n_0
+    SLICE_X14Y38         LUT6 (Prop_lut6_I2_O)        0.124     6.781 f  BeeDisplay/deb_up/BeeY[8]_i_16/O
+                         net (fo=1, routed)           0.599     7.380    BeeDisplay/deb_up/BeeY[8]_i_16_n_0
+    SLICE_X12Y38         LUT6 (Prop_lut6_I4_O)        0.124     7.504 r  BeeDisplay/deb_up/BeeY[8]_i_3/O
+                         net (fo=8, routed)           1.420     8.924    BeeDisplay/deb_up/BeeY[8]_i_3_n_0
+    SLICE_X7Y40          LUT5 (Prop_lut5_I0_O)        0.152     9.076 r  BeeDisplay/deb_up/BeeY[4]_i_1/O
+                         net (fo=1, routed)           0.475     9.551    BeeDisplay/deb_up_n_5
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.515    38.202    BeeDisplay/clk_pix
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[4]/C
+                         clock pessimism              0.602    38.804    
+                         clock uncertainty           -0.159    38.645    
+    SLICE_X7Y40          FDSE (Setup_fdse_C_D)       -0.255    38.390    BeeDisplay/BeeY_reg[4]
+  -------------------------------------------------------------------
+                         required time                         38.390    
+                         arrival time                          -9.551    
+  -------------------------------------------------------------------
+                         slack                                 28.839    
+
+Slack (MET) :             28.929ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.281ns  (logic 1.523ns (14.814%)  route 8.758ns (85.186%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           1.062     9.403    BeeDisplay/BeeX
+    SLICE_X9Y36          FDRE                                         r  BeeDisplay/BeeX_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.445    38.132    BeeDisplay/clk_pix
+    SLICE_X9Y36          FDRE                                         r  BeeDisplay/BeeX_reg[7]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X9Y36          FDRE (Setup_fdre_C_CE)      -0.205    38.332    BeeDisplay/BeeX_reg[7]
+  -------------------------------------------------------------------
+                         required time                         38.332    
+                         arrival time                          -9.403    
+  -------------------------------------------------------------------
+                         slack                                 28.929    
+
+Slack (MET) :             28.998ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[3]/C
+                            (rising edge-triggered cell FDSE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeY_reg[8]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.296ns  (logic 1.552ns (15.074%)  route 8.744ns (84.926%))
+  Logic Levels:           7  (LUT4=1 LUT6=6)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.479ns = ( 38.203 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.879ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.633    -0.879    BeeDisplay/clk_pix
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y40          FDSE (Prop_fdse_C_Q)         0.456    -0.423 r  BeeDisplay/BeeY_reg[3]/Q
+                         net (fo=87, routed)          2.548     2.126    BeeDisplay/BeeY_reg[8]_0[3]
+    SLICE_X11Y46         LUT4 (Prop_lut4_I2_O)        0.150     2.276 f  BeeDisplay/i__carry_i_11/O
+                         net (fo=21, routed)          1.252     3.528    BeeDisplay/i__carry_i_11_n_0
+    SLICE_X12Y41         LUT6 (Prop_lut6_I5_O)        0.326     3.854 f  BeeDisplay/BeeY[8]_i_20/O
+                         net (fo=3, routed)           1.278     5.132    BeeDisplay/deb_up/BeeY[8]_i_53_3
+    SLICE_X14Y37         LUT6 (Prop_lut6_I4_O)        0.124     5.256 f  BeeDisplay/deb_up/BeeY[8]_i_134/O
+                         net (fo=1, routed)           0.466     5.722    BeeDisplay/deb_up/BeeY[8]_i_134_n_0
+    SLICE_X14Y37         LUT6 (Prop_lut6_I2_O)        0.124     5.846 f  BeeDisplay/deb_up/BeeY[8]_i_53/O
+                         net (fo=1, routed)           0.811     6.657    BeeDisplay/deb_up/BeeY[8]_i_53_n_0
+    SLICE_X14Y38         LUT6 (Prop_lut6_I2_O)        0.124     6.781 f  BeeDisplay/deb_up/BeeY[8]_i_16/O
+                         net (fo=1, routed)           0.599     7.380    BeeDisplay/deb_up/BeeY[8]_i_16_n_0
+    SLICE_X12Y38         LUT6 (Prop_lut6_I4_O)        0.124     7.504 r  BeeDisplay/deb_up/BeeY[8]_i_3/O
+                         net (fo=8, routed)           0.581     8.085    BeeDisplay/deb_up/BeeY[8]_i_3_n_0
+    SLICE_X11Y39         LUT6 (Prop_lut6_I1_O)        0.124     8.209 r  BeeDisplay/deb_up/BeeY[8]_i_1/O
+                         net (fo=9, routed)           1.208     9.418    BeeDisplay/BeeY
+    SLICE_X7Y41          FDRE                                         r  BeeDisplay/BeeY_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.516    38.203    BeeDisplay/clk_pix
+    SLICE_X7Y41          FDRE                                         r  BeeDisplay/BeeY_reg[8]/C
+                         clock pessimism              0.577    38.780    
+                         clock uncertainty           -0.159    38.621    
+    SLICE_X7Y41          FDRE (Setup_fdre_C_CE)      -0.205    38.416    BeeDisplay/BeeY_reg[8]
+  -------------------------------------------------------------------
+                         required time                         38.416    
+                         arrival time                          -9.418    
+  -------------------------------------------------------------------
+                         slack                                 28.998    
+
+Slack (MET) :             29.111ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[3]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.135ns  (logic 1.523ns (15.027%)  route 8.612ns (84.973%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.108ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.549ns = ( 38.133 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           0.917     9.258    BeeDisplay/BeeX
+    SLICE_X8Y37          FDRE                                         r  BeeDisplay/BeeX_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.446    38.133    BeeDisplay/clk_pix
+    SLICE_X8Y37          FDRE                                         r  BeeDisplay/BeeX_reg[3]/C
+                         clock pessimism              0.564    38.697    
+                         clock uncertainty           -0.159    38.538    
+    SLICE_X8Y37          FDRE (Setup_fdre_C_CE)      -0.169    38.369    BeeDisplay/BeeX_reg[3]
+  -------------------------------------------------------------------
+                         required time                         38.369    
+                         arrival time                          -9.258    
+  -------------------------------------------------------------------
+                         slack                                 29.111    
+
+Slack (MET) :             29.111ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.135ns  (logic 1.523ns (15.027%)  route 8.612ns (84.973%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.108ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.549ns = ( 38.133 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           0.917     9.258    BeeDisplay/BeeX
+    SLICE_X8Y37          FDRE                                         r  BeeDisplay/BeeX_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.446    38.133    BeeDisplay/clk_pix
+    SLICE_X8Y37          FDRE                                         r  BeeDisplay/BeeX_reg[4]/C
+                         clock pessimism              0.564    38.697    
+                         clock uncertainty           -0.159    38.538    
+    SLICE_X8Y37          FDRE (Setup_fdre_C_CE)      -0.169    38.369    BeeDisplay/BeeX_reg[4]
+  -------------------------------------------------------------------
+                         required time                         38.369    
+                         arrival time                          -9.258    
+  -------------------------------------------------------------------
+                         slack                                 29.111    
+
+Slack (MET) :             29.154ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.091ns  (logic 1.523ns (15.092%)  route 8.568ns (84.908%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           0.873     9.214    BeeDisplay/BeeX
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.445    38.132    BeeDisplay/clk_pix
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[1]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X8Y36          FDRE (Setup_fdre_C_CE)      -0.169    38.368    BeeDisplay/BeeX_reg[1]
+  -------------------------------------------------------------------
+                         required time                         38.368    
+                         arrival time                          -9.214    
+  -------------------------------------------------------------------
+                         slack                                 29.154    
+
+Slack (MET) :             29.154ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.091ns  (logic 1.523ns (15.092%)  route 8.568ns (84.908%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           0.873     9.214    BeeDisplay/BeeX
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.445    38.132    BeeDisplay/clk_pix
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[2]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X8Y36          FDRE (Setup_fdre_C_CE)      -0.169    38.368    BeeDisplay/BeeX_reg[2]
+  -------------------------------------------------------------------
+                         required time                         38.368    
+                         arrival time                          -9.214    
+  -------------------------------------------------------------------
+                         slack                                 29.154    
+
+Slack (MET) :             29.154ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.091ns  (logic 1.523ns (15.092%)  route 8.568ns (84.908%))
+  Logic Levels:           7  (LUT2=1 LUT4=1 LUT6=5)
+  Clock Path Skew:        -0.109ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.878ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.634    -0.878    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y41          FDRE (Prop_fdre_C_Q)         0.478    -0.400 r  BeeDisplay/BeeY_reg[6]/Q
+                         net (fo=103, routed)         2.693     2.293    BeeDisplay/BeeY_reg[8]_0[6]
+    SLICE_X15Y39         LUT2 (Prop_lut2_I0_O)        0.301     2.594 f  BeeDisplay/BeeX[9]_i_55/O
+                         net (fo=7, routed)           1.032     3.626    BeeDisplay/BeeX[9]_i_55_n_0
+    SLICE_X10Y45         LUT6 (Prop_lut6_I1_O)        0.124     3.750 f  BeeDisplay/BeeX[9]_i_141/O
+                         net (fo=3, routed)           1.126     4.876    BeeDisplay/BeeX[9]_i_141_n_0
+    SLICE_X12Y43         LUT6 (Prop_lut6_I4_O)        0.124     5.000 f  BeeDisplay/BeeX[9]_i_103/O
+                         net (fo=2, routed)           1.117     6.117    BeeDisplay/BeeX[9]_i_103_n_0
+    SLICE_X11Y45         LUT4 (Prop_lut4_I1_O)        0.124     6.241 f  BeeDisplay/BeeX[9]_i_85/O
+                         net (fo=1, routed)           0.403     6.644    BeeDisplay/BeeX[9]_i_85_n_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I0_O)        0.124     6.768 f  BeeDisplay/BeeX[9]_i_32/O
+                         net (fo=1, routed)           0.799     7.567    BeeDisplay/deb_left/BeeX_reg[1]_6
+    SLICE_X11Y44         LUT6 (Prop_lut6_I3_O)        0.124     7.691 f  BeeDisplay/deb_left/BeeX[9]_i_10/O
+                         net (fo=1, routed)           0.526     8.217    BeeDisplay/deb_left/BeeX[9]_i_10_n_0
+    SLICE_X10Y44         LUT6 (Prop_lut6_I4_O)        0.124     8.341 r  BeeDisplay/deb_left/BeeX[9]_i_2/O
+                         net (fo=9, routed)           0.873     9.214    BeeDisplay/BeeX
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.445    38.132    BeeDisplay/clk_pix
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[6]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X8Y36          FDRE (Setup_fdre_C_CE)      -0.169    38.368    BeeDisplay/BeeX_reg[6]
+  -------------------------------------------------------------------
+                         required time                         38.368    
+                         arrival time                          -9.214    
+  -------------------------------------------------------------------
+                         slack                                 29.154    
+
+Slack (MET) :             29.217ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[2]/C
+                            (rising edge-triggered cell FDSE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/address_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        9.755ns  (logic 2.156ns (22.102%)  route 7.599ns (77.898%))
+  Logic Levels:           8  (CARRY4=4 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.483ns = ( 38.199 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.879ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.633    -0.879    BeeDisplay/clk_pix
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y40          FDSE (Prop_fdse_C_Q)         0.456    -0.423 f  BeeDisplay/BeeY_reg[2]/Q
+                         net (fo=82, routed)          2.908     2.486    BeeDisplay/BeeY_reg[8]_0[2]
+    SLICE_X12Y40         LUT5 (Prop_lut5_I1_O)        0.150     2.636 r  BeeDisplay/i__carry_i_10/O
+                         net (fo=10, routed)          1.722     4.358    BeeDisplay/i__carry_i_10_n_0
+    SLICE_X6Y43          LUT6 (Prop_lut6_I1_O)        0.328     4.686 r  BeeDisplay/i__carry_i_2/O
+                         net (fo=1, routed)           0.465     5.151    BeeDisplay/i__carry_i_2_n_0
+    SLICE_X5Y42          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     5.549 r  BeeDisplay/address2_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     5.549    BeeDisplay/address2_inferred__0/i__carry_n_0
+    SLICE_X5Y43          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.663 r  BeeDisplay/address2_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.663    BeeDisplay/address2_inferred__0/i__carry__0_n_0
+    SLICE_X5Y44          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.777 r  BeeDisplay/address2_inferred__0/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.777    BeeDisplay/address2_inferred__0/i__carry__1_n_0
+    SLICE_X5Y45          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.891 f  BeeDisplay/address2_inferred__0/i__carry__2/CO[3]
+                         net (fo=3, routed)           1.292     7.183    BeeDisplay/address2
+    SLICE_X3Y39          LUT4 (Prop_lut4_I3_O)        0.150     7.333 f  BeeDisplay/address[8]_i_4/O
+                         net (fo=1, routed)           0.420     7.753    display_inst/address0
+    SLICE_X2Y38          LUT4 (Prop_lut4_I3_O)        0.332     8.085 r  display_inst/address[8]_i_1/O
+                         net (fo=10, routed)          0.791     8.876    BeeDisplay/SR[0]
+    SLICE_X6Y36          FDRE                                         r  BeeDisplay/address_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.512    38.199    BeeDisplay/clk_pix
+    SLICE_X6Y36          FDRE                                         r  BeeDisplay/address_reg[0]/C
+                         clock pessimism              0.577    38.776    
+                         clock uncertainty           -0.159    38.617    
+    SLICE_X6Y36          FDRE (Setup_fdre_C_R)       -0.524    38.093    BeeDisplay/address_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.093    
+                         arrival time                          -8.876    
+  -------------------------------------------------------------------
+                         slack                                 29.217    
+
+Slack (MET) :             29.224ns  (required time - arrival time)
+  Source:                 BeeDisplay/BeeY_reg[3]/C
+                            (rising edge-triggered cell FDSE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeY_reg[5]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        10.107ns  (logic 1.552ns (15.356%)  route 8.555ns (84.644%))
+  Logic Levels:           7  (LUT4=1 LUT6=6)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.479ns = ( 38.203 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.879ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.633    -0.879    BeeDisplay/clk_pix
+    SLICE_X7Y40          FDSE                                         r  BeeDisplay/BeeY_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y40          FDSE (Prop_fdse_C_Q)         0.456    -0.423 r  BeeDisplay/BeeY_reg[3]/Q
+                         net (fo=87, routed)          2.548     2.126    BeeDisplay/BeeY_reg[8]_0[3]
+    SLICE_X11Y46         LUT4 (Prop_lut4_I2_O)        0.150     2.276 f  BeeDisplay/i__carry_i_11/O
+                         net (fo=21, routed)          1.252     3.528    BeeDisplay/i__carry_i_11_n_0
+    SLICE_X12Y41         LUT6 (Prop_lut6_I5_O)        0.326     3.854 f  BeeDisplay/BeeY[8]_i_20/O
+                         net (fo=3, routed)           1.278     5.132    BeeDisplay/deb_up/BeeY[8]_i_53_3
+    SLICE_X14Y37         LUT6 (Prop_lut6_I4_O)        0.124     5.256 f  BeeDisplay/deb_up/BeeY[8]_i_134/O
+                         net (fo=1, routed)           0.466     5.722    BeeDisplay/deb_up/BeeY[8]_i_134_n_0
+    SLICE_X14Y37         LUT6 (Prop_lut6_I2_O)        0.124     5.846 f  BeeDisplay/deb_up/BeeY[8]_i_53/O
+                         net (fo=1, routed)           0.811     6.657    BeeDisplay/deb_up/BeeY[8]_i_53_n_0
+    SLICE_X14Y38         LUT6 (Prop_lut6_I2_O)        0.124     6.781 f  BeeDisplay/deb_up/BeeY[8]_i_16/O
+                         net (fo=1, routed)           0.599     7.380    BeeDisplay/deb_up/BeeY[8]_i_16_n_0
+    SLICE_X12Y38         LUT6 (Prop_lut6_I4_O)        0.124     7.504 r  BeeDisplay/deb_up/BeeY[8]_i_3/O
+                         net (fo=8, routed)           0.581     8.085    BeeDisplay/deb_up/BeeY[8]_i_3_n_0
+    SLICE_X11Y39         LUT6 (Prop_lut6_I1_O)        0.124     8.209 r  BeeDisplay/deb_up/BeeY[8]_i_1/O
+                         net (fo=9, routed)           1.019     9.228    BeeDisplay/BeeY
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         1.516    38.203    BeeDisplay/clk_pix
+    SLICE_X6Y41          FDRE                                         r  BeeDisplay/BeeY_reg[5]/C
+                         clock pessimism              0.577    38.780    
+                         clock uncertainty           -0.159    38.621    
+    SLICE_X6Y41          FDRE (Setup_fdre_C_CE)      -0.169    38.452    BeeDisplay/BeeY_reg[5]
+  -------------------------------------------------------------------
+                         required time                         38.452    
+                         arrival time                          -9.228    
+  -------------------------------------------------------------------
+                         slack                                 29.224    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.149ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[12]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.384ns  (logic 0.141ns (36.692%)  route 0.243ns (63.308%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.591ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.590    -0.591    BeeDisplay/clk_pix
+    SLICE_X7Y37          FDRE                                         r  BeeDisplay/address_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y37          FDRE (Prop_fdre_C_Q)         0.141    -0.450 r  BeeDisplay/address_reg[8]/Q
+                         net (fo=1, routed)           0.243    -0.207    BeeDisplay/BeeVRom/Q[8]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[12])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.207    
+  -------------------------------------------------------------------
+                         slack                                  0.149    
+
+Slack (MET) :             0.150ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.385ns  (logic 0.141ns (36.596%)  route 0.244ns (63.404%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.591ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.590    -0.591    BeeDisplay/clk_pix
+    SLICE_X7Y37          FDRE                                         r  BeeDisplay/address_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y37          FDRE (Prop_fdre_C_Q)         0.141    -0.450 r  BeeDisplay/address_reg[7]/Q
+                         net (fo=1, routed)           0.244    -0.206    BeeDisplay/BeeVRom/Q[7]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[11])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.206    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[9]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.390ns  (logic 0.141ns (36.121%)  route 0.249ns (63.879%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.591ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.590    -0.591    BeeDisplay/clk_pix
+    SLICE_X7Y37          FDRE                                         r  BeeDisplay/address_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y37          FDRE (Prop_fdre_C_Q)         0.141    -0.450 r  BeeDisplay/address_reg[5]/Q
+                         net (fo=1, routed)           0.249    -0.201    BeeDisplay/BeeVRom/Q[5]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[9])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.201    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.200ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.141ns (32.295%)  route 0.296ns (67.705%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.589    -0.592    BeeDisplay/clk_pix
+    SLICE_X7Y36          FDRE                                         r  BeeDisplay/address_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y36          FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  BeeDisplay/address_reg[2]/Q
+                         net (fo=1, routed)           0.296    -0.156    BeeDisplay/BeeVRom/Q[2]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.156    
+  -------------------------------------------------------------------
+                         slack                                  0.200    
+
+Slack (MET) :             0.203ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.439ns  (logic 0.141ns (32.091%)  route 0.298ns (67.909%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.589    -0.592    BeeDisplay/clk_pix
+    SLICE_X7Y36          FDRE                                         r  BeeDisplay/address_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y36          FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  BeeDisplay/address_reg[3]/Q
+                         net (fo=1, routed)           0.298    -0.153    BeeDisplay/BeeVRom/Q[3]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[7])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.153    
+  -------------------------------------------------------------------
+                         slack                                  0.203    
+
+Slack (MET) :             0.203ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.439ns  (logic 0.141ns (32.091%)  route 0.298ns (67.909%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.589    -0.592    BeeDisplay/clk_pix
+    SLICE_X7Y36          FDRE                                         r  BeeDisplay/address_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y36          FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  BeeDisplay/address_reg[4]/Q
+                         net (fo=1, routed)           0.298    -0.153    BeeDisplay/BeeVRom/Q[4]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[8])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.153    
+  -------------------------------------------------------------------
+                         slack                                  0.203    
+
+Slack (MET) :             0.204ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[5]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.440ns  (logic 0.141ns (32.018%)  route 0.299ns (67.982%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.053ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.589    -0.592    BeeDisplay/clk_pix
+    SLICE_X7Y36          FDRE                                         r  BeeDisplay/address_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y36          FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  BeeDisplay/address_reg[1]/Q
+                         net (fo=1, routed)           0.299    -0.152    BeeDisplay/BeeVRom/Q[1]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[5])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.152    
+  -------------------------------------------------------------------
+                         slack                                  0.204    
+
+Slack (MET) :             0.208ns  (arrival time - required time)
+  Source:                 BeeDisplay/deb_rst/sync_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/deb_rst/sync_q_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.141ns (45.668%)  route 0.168ns (54.332%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.031ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.842ns
+    Source Clock Delay      (SCD):    -0.598ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.583    -0.598    BeeDisplay/deb_rst/clk_pix
+    SLICE_X0Y23          FDRE                                         r  BeeDisplay/deb_rst/sync_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y23          FDRE (Prop_fdre_C_Q)         0.141    -0.457 r  BeeDisplay/deb_rst/sync_q_reg[0]/Q
+                         net (fo=1, routed)           0.168    -0.290    BeeDisplay/deb_rst/sync_d__3[1]
+    SLICE_X4Y24          FDRE                                         r  BeeDisplay/deb_rst/sync_q_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.848    -0.842    BeeDisplay/deb_rst/clk_pix
+    SLICE_X4Y24          FDRE                                         r  BeeDisplay/deb_rst/sync_q_reg[1]/C
+                         clock pessimism              0.274    -0.567    
+    SLICE_X4Y24          FDRE (Hold_fdre_C_D)         0.070    -0.497    BeeDisplay/deb_rst/sync_q_reg[1]
+  -------------------------------------------------------------------
+                         required time                          0.497    
+                         arrival time                          -0.290    
+  -------------------------------------------------------------------
+                         slack                                  0.208    
+
+Slack (MET) :             0.209ns  (arrival time - required time)
+  Source:                 BeeDisplay/address_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.445ns  (logic 0.141ns (31.689%)  route 0.304ns (68.311%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.052ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.591ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.590    -0.591    BeeDisplay/clk_pix
+    SLICE_X7Y37          FDRE                                         r  BeeDisplay/address_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y37          FDRE (Prop_fdre_C_Q)         0.141    -0.450 r  BeeDisplay/address_reg[6]/Q
+                         net (fo=1, routed)           0.304    -0.146    BeeDisplay/BeeVRom/Q[6]
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.876    -0.813    BeeDisplay/BeeVRom/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+                         clock pessimism              0.274    -0.539    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[10])
+                                                      0.183    -0.356    BeeDisplay/BeeVRom/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.356    
+                         arrival time                          -0.146    
+  -------------------------------------------------------------------
+                         slack                                  0.209    
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 BeeDisplay/BeeX_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            BeeDisplay/BeeX_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.320ns  (logic 0.209ns (65.351%)  route 0.111ns (34.649%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.859ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.252ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.562    -0.619    BeeDisplay/clk_pix
+    SLICE_X8Y36          FDRE                                         r  BeeDisplay/BeeX_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y36          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  BeeDisplay/BeeX_reg[6]/Q
+                         net (fo=95, routed)          0.111    -0.345    BeeDisplay/deb_right/Q[5]
+    SLICE_X9Y36          LUT6 (Prop_lut6_I4_O)        0.045    -0.300 r  BeeDisplay/deb_right/BeeX[7]_i_1/O
+                         net (fo=1, routed)           0.000    -0.300    BeeDisplay/deb_right_n_2
+    SLICE_X9Y36          FDRE                                         r  BeeDisplay/BeeX_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=174, routed)         0.831    -0.859    BeeDisplay/clk_pix
+    SLICE_X9Y36          FDRE                                         r  BeeDisplay/BeeX_reg[7]/C
+                         clock pessimism              0.252    -0.606    
+    SLICE_X9Y36          FDRE (Hold_fdre_C_D)         0.091    -0.515    BeeDisplay/BeeX_reg[7]
+  -------------------------------------------------------------------
+                         required time                          0.515    
+                         arrival time                          -0.300    
+  -------------------------------------------------------------------
+                         slack                                  0.216    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_pix_VGA_Clock
+Waveform(ns):       { 0.000 19.841 }
+Period(ns):         39.683
+Sources:            { clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         39.683      37.107     RAMB18_X0Y14     BeeDisplay/BeeVRom/dataout_reg/CLKARDCLK
+Min Period        n/a     BUFG/I              n/a            2.155         39.683      37.527     BUFGCTRL_X0Y0    clock_pix_inst/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         39.683      38.434     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X3Y39      BeeDisplay/BeeSpriteOn_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            1.000         39.683      38.683     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_1_cooolDelFlop/C
+Min Period        n/a     FDCE/C              n/a            1.000         39.683      38.683     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_2_cooolDelFlop/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X11Y30     BeeDisplay/deb_down/ctr_q_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X10Y31     BeeDisplay/deb_down/ctr_q_reg[10]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X4Y27      BeeDisplay/deb_left/ctr_q_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[10]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       39.683      173.677    MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         19.841      19.341     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_1_cooolDelFlop/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         19.841      19.341     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_2_cooolDelFlop/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[10]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[13]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[14]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[15]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[16]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[17]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y31      BeeDisplay/deb_left/ctr_q_reg[18]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y31      BeeDisplay/deb_left/ctr_q_reg[19]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X3Y39      BeeDisplay/BeeSpriteOn_reg[0]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         19.841      19.341     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_1_cooolDelFlop/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         19.841      19.341     SLICE_X3Y37      BeeDisplay/BeeVRom/BeeDisplay/BeeVRom/dataout_reg_cooolgate_en_gate_2_cooolDelFlop/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X11Y30     BeeDisplay/deb_down/ctr_q_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X10Y31     BeeDisplay/deb_down/ctr_q_reg[10]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X4Y27      BeeDisplay/deb_left/ctr_q_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[10]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y28      BeeDisplay/deb_left/ctr_q_reg[11]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y28      BeeDisplay/deb_left/ctr_q_reg[12]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y29      BeeDisplay/deb_left/ctr_q_reg[13]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_VGA_Clock
+  To Clock:  clkfbout_VGA_Clock
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       47.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_VGA_Clock
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         50.000      47.845     BUFGCTRL_X0Y1    clock_pix_inst/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       50.000      50.000     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       50.000      163.360    MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT
+
+
+

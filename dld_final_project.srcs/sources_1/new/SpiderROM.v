@@ -11,7 +11,7 @@
 
 // Setup BeeRom module
 module SpiderRom(
-    input wire [9:0] address, // (9:0) or 2^10 or 1024, need 34 x 27 = 918
+    input wire [8:0] address, // (9:0) or 2^10 or 1024, need 34 x 27 = 918
     input wire clk_pix,
     output reg [7:0] dataout // (7:0) 8 bit pixel value from Bee.mem
     );
