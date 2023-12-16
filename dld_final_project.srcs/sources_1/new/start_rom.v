@@ -11,12 +11,12 @@
 
 // Setup BeeRom module
 module start_rom(
-    input wire [19:0] address, // (9:0) or 2^10 or 1024, need 34 x 27 = 918
+    input wire [18:0] address, // (9:0) or 2^10 or 1024, need 34 x 27 = 918
     input wire clk_pix,
     output reg [7:0] dataout // (7:0) 8 bit pixel value from Bee.mem
     );
 
-    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:300799]; // 8 bit values for 918 pixels of Bee (34 x 27)
+    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:230399]; // 8 bit values for 918 pixels of Bee (34 x 27)
 
     initial 
     begin

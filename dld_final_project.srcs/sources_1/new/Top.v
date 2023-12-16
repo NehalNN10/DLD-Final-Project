@@ -72,18 +72,24 @@ module Top(
     );
     
     // Instantiate BeeSprite
-    wire [1:0] DiamondOn;                 // 1=on, 0=off
-    wire [7:0] dout2;                        // pixel value from Bee.mem
+    wire [1:0] DiamondOn1;
+    wire [1:0] DiamondOn2;
+    wire [1:0] DiamondOn3;                 // 1=on, 0=off
+    wire [7:0] diamond_out_1;
+    wire [7:0] diamond_out_2;
+    wire [7:0] diamond_out_3;                        // pixel value from Bee.mem
     Diamond DiamondDisplay1 (
         .clk_pix(clk_pix),
         .sx(sx),
         .sy(sy),
-        .BeeX(300),
-        .BeeY(200),
         .de(de),
         .rstBtn(restart),
-        .BeeSpriteOn(DiamondOn),
-        .dataout(dout2)
+        .diamond_on_1(DiamondOn1),
+        .diamond_on_2(DiamondOn2),
+        .diamond_on_3(DiamondOn3),
+        .dataout_1(diamond_out_1),
+        .dataout_2(diamond_out_2),
+        .dataout_3(diamond_out_3)
     );
     
     // Load colour palette
@@ -91,13 +97,32 @@ module Top(
     reg [7:0] COL2 = 0;                      // background colour palette value
     initial begin
         $readmemh("pal_diamond.mem", diamond_palette); // load 192 hex values into "palette"
+    end  
+    
+    // Instantiate BeeSprite
+    wire [1:0] StartScreenOn;                 // 1=on, 0=off
+    wire [7:0] ss;                        // pixel value from Bee.mem
+    StartGame StartScreenDisplay (
+        .clk_pix(clk_pix),
+        .sx(sx),
+        .sy(sy),
+        .de(de),
+        .screenOn(StartScreenOn),
+        .dataout(ss)
+    );
+    
+    // Load colour palette
+    reg [7:0] start_screen_palette [0:191];              // 8 bit values from the 192 hex entries in the colour palette
+//    reg [7:0] COL = 0;                      // background colour palette value
+    initial begin
+        $readmemh("pal_start_game_screen.mem", start_screen_palette); // load 192 hex values into "palette"
     end   
     
     
     // Instantiate BeeSprite
     wire [1:0] BeeSpriteOn;                 // 1=on, 0=off
     wire [7:0] dout;                        // pixel value from Bee.mem
-    Spiderman BeeDisplay (
+    Spiderman SpidermanDisplay (
         .clk_pix(clk_pix),
         .sx(sx),
         .sy(sy),
@@ -107,7 +132,6 @@ module Top(
         .btnU(btnU),
         .btnD(btnD),
         .rstBtn(restart),
-//        .gameStart(startGame),
         .BeeSpriteOn(BeeSpriteOn),
         .dataout(dout)
     );
@@ -131,11 +155,23 @@ module Top(
                             vga_g <= (palette[(dout*3)+1])>>4;  // GREEN bits(7:4) from colour palette
                             vga_b <= (palette[(dout*3)+2])>>4;  // BLUE bits(7:4) from colour palette
                         end
-                    else if (DiamondOn==1)
+                    else if (DiamondOn1==1)
                         begin
-                            vga_r <= (diamond_palette[(dout2*3)])>>4;    // RED bits(7:4) from colour palette
-                            vga_g <= (diamond_palette[(dout2*3)+1])>>4;  // GREEN bits(7:4) from colour palette
-                            vga_b <= (diamond_palette[(dout2*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                            vga_r <= (diamond_palette[(diamond_out_1*3)])>>4;    // RED bits(7:4) from colour palette
+                            vga_g <= (diamond_palette[(diamond_out_1*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                            vga_b <= (diamond_palette[(diamond_out_1*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                        end
+                     else if (DiamondOn2==1)
+                        begin
+                            vga_r <= (diamond_palette[(diamond_out_2*3)])>>4;    // RED bits(7:4) from colour palette
+                            vga_g <= (diamond_palette[(diamond_out_2*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                            vga_b <= (diamond_palette[(diamond_out_2*3)+2])>>4;  // BLUE bits(7:4) from colour palette
+                        end
+                     else if (DiamondOn3==1)
+                        begin
+                            vga_r <= (diamond_palette[(diamond_out_3*3)])>>4;    // RED bits(7:4) from colour palette
+                            vga_g <= (diamond_palette[(diamond_out_3*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                            vga_b <= (diamond_palette[(diamond_out_3*3)+2])>>4;  // BLUE bits(7:4) from colour palette
                         end
                     else
                         begin
@@ -143,6 +179,12 @@ module Top(
                             vga_g <= maze_green;
                             vga_b <= maze_blue;
                         end
+                else
+                    begin
+                            vga_r <= (start_screen_palette[(ss*3)])>>4;
+                            vga_g <= (start_screen_palette[(ss*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+                            vga_b <= (start_screen_palette[(ss*3)+2])>>4;
+                    end
             end
         else
             begin

@@ -19,7 +19,7 @@ module StartGame(
     );
 
     // instantiate BeeRom code
-    reg [9:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    reg [18:0] address; // 2^10 or 1024, need 34 x 27 = 918
     start_rom sRom (
         .address(address),
         .clk_pix(clk_pix),
@@ -28,9 +28,9 @@ module StartGame(
     
     // setup character positions and sizes
     reg [9:0] screenX = 0; // Bee X start position
-    reg [8:0] screenY = 5; // Bee Y start position
-    localparam screenHeight = 640;
-    localparam screenWidth = 470;
+    reg [8:0] screenY = 0; // Bee Y start position
+    localparam screenHeight = 480;
+    localparam screenWidth = 480;
     
     // check if sx,sy are within the confines of the Bee character
     always @ (posedge clk_pix)

@@ -16,7 +16,7 @@ module DiamondRom(
     output reg [7:0] dataout // (7:0) 8 bit pixel value from Bee.mem
     );
 
-    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:399]; // 8 bit values for 918 pixels of Bee (34 x 27)
+    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:459]; // 8 bit values for 918 pixels of Bee (34 x 27)
 
     initial 
     begin
