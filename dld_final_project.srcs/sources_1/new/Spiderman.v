@@ -20,7 +20,9 @@ module Spiderman(
     input wire btnD, // down button
     input wire rstBtn,
     output reg [1:0] BeeSpriteOn, // 1=on, 0=off
-    output wire [7:0] dataout
+    output wire [7:0] dataout,
+    output reg [9:0] BeesX,
+    output reg [8:0] BeesY
     );
 
     // instantiate BeeRom code
@@ -68,7 +70,7 @@ module Spiderman(
     
     // setup character positions and sizes
     reg [9:0] BeeX = 0; // Bee X start position
-    reg [8:0] BeeY = 25; // Bee Y start position
+    reg [8:0] BeeY = 24; // Bee Y start position
     localparam BeeWidth = 20; // Bee width in pixels
     localparam BeeHeight = 20; // Bee height in pixels
     localparam BeeSpeedX = 2;
@@ -116,5 +118,7 @@ module Spiderman(
             BeeX <= 0;
             BeeY <= 30;
         end
+        BeesX = BeeX;
+        BeesY = BeeY;
     end
 endmodule

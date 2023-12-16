@@ -121,7 +121,6 @@ read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Debounce.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/PeterSprite.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/PeterRom.v
-  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/temp.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/PetahDraw.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/BeeSprite.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/bee_stuff/BeeRom.v
@@ -136,6 +135,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Diamond.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/DiamondRom.v
 }
+read_vhdl -library xil_defaultlib {{C:/Users/Dell/Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd}}
 read_ip -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xci
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xdc]

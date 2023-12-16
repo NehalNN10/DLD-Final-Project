@@ -1,0 +1,1781 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 16 15:31:45 2023
+| Host         : CTRL-ALT-DEL running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Top_timing_summary_routed.rpt -pb Top_timing_summary_routed.pb -rpx Top_timing_summary_routed.rpx -warn_on_violation
+| Design       : Top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (6)
+6. checking no_output_delay (14)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (6)
+------------------------------
+ There are 6 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (14)
+--------------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     20.002        0.000                      0                  476        0.106        0.000                      0                  476        3.000        0.000                       0                   227  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                 Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                 ------------       ----------      --------------
+sys_clk_pin           {0.000 5.000}      10.000          100.000         
+  clk_pix_VGA_Clock   {0.000 19.841}     39.683          25.200          
+  clkfbout_VGA_Clock  {0.000 25.000}     50.000          20.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin                                                                                                                                                             3.000        0.000                       0                     1  
+  clk_pix_VGA_Clock        20.002        0.000                      0                  476        0.106        0.000                      0                  476       19.341        0.000                       0                   223  
+  clkfbout_VGA_Clock                                                                                                                                                   47.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk_100m }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_pix_VGA_Clock
+  To Clock:  clk_pix_VGA_Clock
+
+Setup :            0  Failing Endpoints,  Worst Slack       20.002ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.106ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack       19.341ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             20.002ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            m1/red_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        19.444ns  (logic 10.149ns (52.197%)  route 9.295ns (47.803%))
+  Logic Levels:           16  (CARRY4=7 DSP48E1=2 LUT2=2 LUT4=3 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.107ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.555ns = ( 38.127 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.419    -0.466 r  display_inst/sx_reg[2]/Q
+                         net (fo=57, routed)          3.358     2.892    SpidermanDisplay/square1__2[2]
+    SLICE_X13Y21         LUT4 (Prop_lut4_I1_O)        0.299     3.191 r  SpidermanDisplay/square1__2_i_20/O
+                         net (fo=1, routed)           0.000     3.191    display_inst/square1__2_0[0]
+    SLICE_X13Y21         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     3.589 r  display_inst/square1__2_i_3/CO[3]
+                         net (fo=1, routed)           0.000     3.589    display_inst/square1__2_i_3_n_0
+    SLICE_X13Y22         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     3.703 r  display_inst/square1__2_i_2/CO[3]
+                         net (fo=1, routed)           0.000     3.703    display_inst/square1__2_i_2_n_0
+    SLICE_X13Y23         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.016 r  display_inst/square1__2_i_1/O[3]
+                         net (fo=54, routed)          0.808     4.824    m1/square1__2_0[11]
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.218     9.042 r  m1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     9.044    m1/square1__3_n_106
+    DSP48_X0Y9           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    10.562 r  m1/square1__4/P[0]
+                         net (fo=2, routed)           1.139    11.701    m1/square1__4_n_105
+    SLICE_X13Y15         LUT2 (Prop_lut2_I0_O)        0.124    11.825 r  m1/red[0]_i_218/O
+                         net (fo=1, routed)           0.000    11.825    m1/red[0]_i_218_n_0
+    SLICE_X13Y15         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    12.375 r  m1/red_reg[0]_i_197/CO[3]
+                         net (fo=1, routed)           0.000    12.375    m1/red_reg[0]_i_197_n_0
+    SLICE_X13Y16         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    12.709 r  m1/red_reg[0]_i_165/O[1]
+                         net (fo=2, routed)           0.735    13.445    m1/red_reg[0]_i_165_n_6
+    SLICE_X11Y16         LUT2 (Prop_lut2_I0_O)        0.303    13.748 r  m1/red[0]_i_168/O
+                         net (fo=1, routed)           0.000    13.748    m1/red[0]_i_168_n_0
+    SLICE_X11Y16         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.298 r  m1/red_reg[0]_i_90/CO[3]
+                         net (fo=1, routed)           0.000    14.298    m1/red_reg[0]_i_90_n_0
+    SLICE_X11Y17         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.632 f  m1/red_reg[0]_i_158/O[1]
+                         net (fo=1, routed)           0.659    15.291    m1/red_reg[0]_i_158_n_6
+    SLICE_X10Y17         LUT4 (Prop_lut4_I1_O)        0.303    15.594 f  m1/red[0]_i_89/O
+                         net (fo=1, routed)           0.312    15.906    m1/red[0]_i_89_n_0
+    SLICE_X10Y18         LUT5 (Prop_lut5_I4_O)        0.124    16.030 f  m1/red[0]_i_25/O
+                         net (fo=1, routed)           0.949    16.979    m1/red[0]_i_25_n_0
+    SLICE_X10Y14         LUT4 (Prop_lut4_I2_O)        0.124    17.103 f  m1/red[0]_i_6/O
+                         net (fo=1, routed)           1.332    18.435    display_inst/red_reg[0]
+    SLICE_X9Y31          LUT6 (Prop_lut6_I4_O)        0.124    18.559 r  display_inst/red[0]_i_1/O
+                         net (fo=1, routed)           0.000    18.559    m1/red_reg[0]_0
+    SLICE_X9Y31          FDRE                                         r  m1/red_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.440    38.127    m1/clk_pix
+    SLICE_X9Y31          FDRE                                         r  m1/red_reg[0]/C
+                         clock pessimism              0.564    38.691    
+                         clock uncertainty           -0.159    38.532    
+    SLICE_X9Y31          FDRE (Setup_fdre_C_D)        0.029    38.561    m1/red_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.561    
+                         arrival time                         -18.559    
+  -------------------------------------------------------------------
+                         slack                                 20.002    
+
+Slack (MET) :             20.609ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_1_reg[1]/R
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.087ns  (logic 9.265ns (51.225%)  route 8.822ns (48.775%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=2 LUT4=2 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.102ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           0.669    16.097    display_inst/address_1115_out
+    SLICE_X7Y33          LUT4 (Prop_lut4_I0_O)        0.118    16.215 r  display_inst/address_1[8]_i_1/O
+                         net (fo=9, routed)           0.988    17.202    DiamondDisplay1/SR[0]
+    SLICE_X8Y36          FDRE                                         r  DiamondDisplay1/address_1_reg[1]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.445    38.132    DiamondDisplay1/clk_pix
+    SLICE_X8Y36          FDRE                                         r  DiamondDisplay1/address_1_reg[1]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X8Y36          FDRE (Setup_fdre_C_R)       -0.726    37.811    DiamondDisplay1/address_1_reg[1]
+  -------------------------------------------------------------------
+                         required time                         37.811    
+                         arrival time                         -17.202    
+  -------------------------------------------------------------------
+                         slack                                 20.609    
+
+Slack (MET) :             20.704ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.387ns  (logic 9.300ns (50.579%)  route 9.087ns (49.421%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.482ns = ( 38.200 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.635    17.502    DiamondDisplay1/address_2
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.513    38.200    DiamondDisplay1/clk_pix
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[6]/C
+                         clock pessimism              0.577    38.777    
+                         clock uncertainty           -0.159    38.618    
+    SLICE_X7Y37          FDRE (Setup_fdre_C_CE)      -0.412    38.206    DiamondDisplay1/address_2_reg[6]
+  -------------------------------------------------------------------
+                         required time                         38.206    
+                         arrival time                         -17.502    
+  -------------------------------------------------------------------
+                         slack                                 20.704    
+
+Slack (MET) :             20.704ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.387ns  (logic 9.300ns (50.579%)  route 9.087ns (49.421%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.482ns = ( 38.200 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.635    17.502    DiamondDisplay1/address_2
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.513    38.200    DiamondDisplay1/clk_pix
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[7]/C
+                         clock pessimism              0.577    38.777    
+                         clock uncertainty           -0.159    38.618    
+    SLICE_X7Y37          FDRE (Setup_fdre_C_CE)      -0.412    38.206    DiamondDisplay1/address_2_reg[7]
+  -------------------------------------------------------------------
+                         required time                         38.206    
+                         arrival time                         -17.502    
+  -------------------------------------------------------------------
+                         slack                                 20.704    
+
+Slack (MET) :             20.704ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[8]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.387ns  (logic 9.300ns (50.579%)  route 9.087ns (49.421%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.482ns = ( 38.200 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.635    17.502    DiamondDisplay1/address_2
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.513    38.200    DiamondDisplay1/clk_pix
+    SLICE_X7Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[8]/C
+                         clock pessimism              0.577    38.777    
+                         clock uncertainty           -0.159    38.618    
+    SLICE_X7Y37          FDRE (Setup_fdre_C_CE)      -0.412    38.206    DiamondDisplay1/address_2_reg[8]
+  -------------------------------------------------------------------
+                         required time                         38.206    
+                         arrival time                         -17.502    
+  -------------------------------------------------------------------
+                         slack                                 20.704    
+
+Slack (MET) :             20.740ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.387ns  (logic 9.300ns (50.579%)  route 9.087ns (49.421%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.482ns = ( 38.200 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.635    17.502    DiamondDisplay1/address_2
+    SLICE_X6Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.513    38.200    DiamondDisplay1/clk_pix
+    SLICE_X6Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[0]/C
+                         clock pessimism              0.577    38.777    
+                         clock uncertainty           -0.159    38.618    
+    SLICE_X6Y37          FDRE (Setup_fdre_C_CE)      -0.376    38.242    DiamondDisplay1/address_2_reg[0]
+  -------------------------------------------------------------------
+                         required time                         38.242    
+                         arrival time                         -17.502    
+  -------------------------------------------------------------------
+                         slack                                 20.740    
+
+Slack (MET) :             20.740ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.387ns  (logic 9.300ns (50.579%)  route 9.087ns (49.421%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.021ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.482ns = ( 38.200 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.635    17.502    DiamondDisplay1/address_2
+    SLICE_X6Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.513    38.200    DiamondDisplay1/clk_pix
+    SLICE_X6Y37          FDRE                                         r  DiamondDisplay1/address_2_reg[2]/C
+                         clock pessimism              0.577    38.777    
+                         clock uncertainty           -0.159    38.618    
+    SLICE_X6Y37          FDRE (Setup_fdre_C_CE)      -0.376    38.242    DiamondDisplay1/address_2_reg[2]
+  -------------------------------------------------------------------
+                         required time                         38.242    
+                         arrival time                         -17.502    
+  -------------------------------------------------------------------
+                         slack                                 20.740    
+
+Slack (MET) :             20.812ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_1_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.441ns  (logic 9.271ns (50.274%)  route 9.170ns (49.726%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.102ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.550ns = ( 38.132 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.564ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.124    16.839 r  DiamondDisplay1/address_1[8]_i_2/O
+                         net (fo=9, routed)           0.718    17.556    DiamondDisplay1/address_1
+    SLICE_X8Y36          FDRE                                         r  DiamondDisplay1/address_1_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.445    38.132    DiamondDisplay1/clk_pix
+    SLICE_X8Y36          FDRE                                         r  DiamondDisplay1/address_1_reg[1]/C
+                         clock pessimism              0.564    38.696    
+                         clock uncertainty           -0.159    38.537    
+    SLICE_X8Y36          FDRE (Setup_fdre_C_CE)      -0.169    38.368    DiamondDisplay1/address_1_reg[1]
+  -------------------------------------------------------------------
+                         required time                         38.368    
+                         arrival time                         -17.556    
+  -------------------------------------------------------------------
+                         slack                                 20.812    
+
+Slack (MET) :             20.843ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[3]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.246ns  (logic 9.300ns (50.970%)  route 8.946ns (49.030%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.483ns = ( 38.199 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.494    17.362    DiamondDisplay1/address_2
+    SLICE_X7Y36          FDRE                                         r  DiamondDisplay1/address_2_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.512    38.199    DiamondDisplay1/clk_pix
+    SLICE_X7Y36          FDRE                                         r  DiamondDisplay1/address_2_reg[3]/C
+                         clock pessimism              0.577    38.776    
+                         clock uncertainty           -0.159    38.617    
+    SLICE_X7Y36          FDRE (Setup_fdre_C_CE)      -0.412    38.205    DiamondDisplay1/address_2_reg[3]
+  -------------------------------------------------------------------
+                         required time                         38.205    
+                         arrival time                         -17.362    
+  -------------------------------------------------------------------
+                         slack                                 20.843    
+
+Slack (MET) :             20.843ns  (required time - arrival time)
+  Source:                 display_inst/sx_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/address_2_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            39.683ns  (clk_pix_VGA_Clock rise@39.683ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        18.246ns  (logic 9.300ns (50.970%)  route 8.946ns (49.030%))
+  Logic Levels:           13  (CARRY4=3 DSP48E1=2 LUT2=3 LUT4=1 LUT5=2 LUT6=2)
+  Clock Path Skew:        -0.022ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -1.483ns = ( 38.199 - 39.683 ) 
+    Source Clock Delay      (SCD):    -0.885ns
+    Clock Pessimism Removal (CPR):    0.577ns
+  Clock Uncertainty:      0.159ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.310ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.691    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -6.961    -4.269 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.661    -2.608    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096    -2.512 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.627    -0.885    display_inst/clk_pix
+    SLICE_X5Y33          FDRE                                         r  display_inst/sx_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y33          FDRE (Prop_fdre_C_Q)         0.456    -0.429 f  display_inst/sx_reg[1]/Q
+                         net (fo=48, routed)          1.906     1.477    display_inst/sx[1]
+    SLICE_X12Y34         LUT5 (Prop_lut5_I4_O)        0.152     1.629 r  display_inst/square1__2_i_11__0/O
+                         net (fo=4, routed)           0.577     2.206    display_inst/square1__2_i_11__0_n_0
+    SLICE_X13Y36         LUT5 (Prop_lut5_I3_O)        0.342     2.548 r  display_inst/square1__2_i_1__0/O
+                         net (fo=58, routed)          0.810     3.358    DiamondDisplay1/square2[7]
+    DSP48_X0Y15          DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.238     7.596 r  DiamondDisplay1/square1__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     7.598    DiamondDisplay1/square1__3_n_106
+    DSP48_X0Y16          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518     9.116 r  DiamondDisplay1/square1__4/P[0]
+                         net (fo=2, routed)           0.744     9.860    DiamondDisplay1/square1__4_n_105
+    SLICE_X11Y40         LUT2 (Prop_lut2_I0_O)        0.124     9.984 r  DiamondDisplay1/address_1[8]_i_90/O
+                         net (fo=1, routed)           0.000     9.984    DiamondDisplay1/address_1[8]_i_90_n_0
+    SLICE_X11Y40         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    10.534 r  DiamondDisplay1/address_1_reg[8]_i_60/CO[3]
+                         net (fo=1, routed)           0.000    10.534    DiamondDisplay1/address_1_reg[8]_i_60_n_0
+    SLICE_X11Y41         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.868 r  DiamondDisplay1/address_1_reg[8]_i_50/O[1]
+                         net (fo=2, routed)           0.957    11.825    DiamondDisplay1/address_1_reg[8]_i_50_n_6
+    SLICE_X11Y36         LUT2 (Prop_lut2_I0_O)        0.303    12.128 r  DiamondDisplay1/address_1[8]_i_53/O
+                         net (fo=1, routed)           0.000    12.128    DiamondDisplay1/address_1[8]_i_53_n_0
+    SLICE_X11Y36         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    12.708 f  DiamondDisplay1/address_1_reg[8]_i_34/O[2]
+                         net (fo=1, routed)           0.847    13.556    DiamondDisplay1/address_1_reg[8]_i_34_n_5
+    SLICE_X10Y36         LUT4 (Prop_lut4_I0_O)        0.302    13.858 f  DiamondDisplay1/address_1[8]_i_33/O
+                         net (fo=1, routed)           0.872    14.730    DiamondDisplay1/address_1[8]_i_33_n_0
+    SLICE_X10Y36         LUT6 (Prop_lut6_I2_O)        0.124    14.854 f  DiamondDisplay1/address_1[8]_i_16/O
+                         net (fo=1, routed)           0.450    15.304    DiamondDisplay1/address_1[8]_i_16_n_0
+    SLICE_X10Y33         LUT6 (Prop_lut6_I4_O)        0.124    15.428 r  DiamondDisplay1/address_1[8]_i_4/O
+                         net (fo=9, routed)           1.287    16.715    DiamondDisplay1/address_1115_out
+    SLICE_X6Y35          LUT2 (Prop_lut2_I0_O)        0.153    16.868 r  DiamondDisplay1/address_2[8]_i_2/O
+                         net (fo=9, routed)           0.494    17.362    DiamondDisplay1/address_2
+    SLICE_X7Y36          FDRE                                         r  DiamondDisplay1/address_2_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                     39.683    39.683 r  
+    W5                                                0.000    39.683 r  clk_100m (IN)
+                         net (fo=0)                   0.000    39.683    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    41.071 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           1.162    42.232    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -7.217    35.015 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.581    36.596    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    36.687 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         1.512    38.199    DiamondDisplay1/clk_pix
+    SLICE_X7Y36          FDRE                                         r  DiamondDisplay1/address_2_reg[4]/C
+                         clock pessimism              0.577    38.776    
+                         clock uncertainty           -0.159    38.617    
+    SLICE_X7Y36          FDRE (Setup_fdre_C_CE)      -0.412    38.205    DiamondDisplay1/address_2_reg[4]
+  -------------------------------------------------------------------
+                         required time                         38.205    
+                         arrival time                         -17.362    
+  -------------------------------------------------------------------
+                         slack                                 20.843    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.106ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.350ns  (logic 0.141ns (40.308%)  route 0.209ns (59.692%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X9Y35          FDRE                                         r  DiamondDisplay1/address_3_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y35          FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  DiamondDisplay1/address_3_reg[2]/Q
+                         net (fo=1, routed)           0.209    -0.270    DiamondDisplay1/diamond_rom_3/Q[2]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.270    
+  -------------------------------------------------------------------
+                         slack                                  0.106    
+
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[10]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.365ns  (logic 0.164ns (44.955%)  route 0.201ns (55.045%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y35          FDRE                                         r  DiamondDisplay1/address_3_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y35          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_3_reg[6]/Q
+                         net (fo=1, routed)           0.201    -0.255    DiamondDisplay1/diamond_rom_3/Q[6]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[10])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.255    
+  -------------------------------------------------------------------
+                         slack                                  0.121    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[7]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.374ns  (logic 0.164ns (43.807%)  route 0.210ns (56.193%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y34          FDRE                                         r  DiamondDisplay1/address_3_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y34          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_3_reg[3]/Q
+                         net (fo=1, routed)           0.210    -0.245    DiamondDisplay1/diamond_rom_3/Q[3]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[7])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.245    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[12]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.375ns  (logic 0.164ns (43.758%)  route 0.211ns (56.242%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y35          FDRE                                         r  DiamondDisplay1/address_3_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y35          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_3_reg[8]/Q
+                         net (fo=1, routed)           0.211    -0.245    DiamondDisplay1/diamond_rom_3/Q[8]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[12])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.245    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.150ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_1_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRARDADDR[5]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.395ns  (logic 0.164ns (41.500%)  route 0.231ns (58.500%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.062ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.811ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y36          FDRE                                         r  DiamondDisplay1/address_1_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y36          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_1_reg[1]/Q
+                         net (fo=1, routed)           0.231    -0.224    DiamondDisplay1/diamond_rom_1/Q[1]
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.878    -0.811    DiamondDisplay1/diamond_rom_1/clk_pix
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.557    
+    RAMB18_X0Y16         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[5])
+                                                      0.183    -0.374    DiamondDisplay1/diamond_rom_1/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.374    
+                         arrival time                          -0.224    
+  -------------------------------------------------------------------
+                         slack                                  0.150    
+
+Slack (MET) :             0.154ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[5]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.397ns  (logic 0.141ns (35.497%)  route 0.256ns (64.503%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X9Y35          FDRE                                         r  DiamondDisplay1/address_3_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y35          FDRE (Prop_fdre_C_Q)         0.141    -0.478 r  DiamondDisplay1/address_3_reg[1]/Q
+                         net (fo=1, routed)           0.256    -0.222    DiamondDisplay1/diamond_rom_3/Q[1]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[5])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.222    
+  -------------------------------------------------------------------
+                         slack                                  0.154    
+
+Slack (MET) :             0.172ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_1_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRARDADDR[6]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.417ns  (logic 0.164ns (39.336%)  route 0.253ns (60.664%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.061ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.811ns
+    Source Clock Delay      (SCD):    -0.618ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.563    -0.618    DiamondDisplay1/clk_pix
+    SLICE_X8Y37          FDRE                                         r  DiamondDisplay1/address_1_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y37          FDRE (Prop_fdre_C_Q)         0.164    -0.454 r  DiamondDisplay1/address_1_reg[2]/Q
+                         net (fo=1, routed)           0.253    -0.201    DiamondDisplay1/diamond_rom_1/Q[2]
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRARDADDR[6]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.878    -0.811    DiamondDisplay1/diamond_rom_1/clk_pix
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.557    
+    RAMB18_X0Y16         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[6])
+                                                      0.183    -0.374    DiamondDisplay1/diamond_rom_1/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.374    
+                         arrival time                          -0.201    
+  -------------------------------------------------------------------
+                         slack                                  0.172    
+
+Slack (MET) :             0.181ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[9]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.424ns  (logic 0.164ns (38.657%)  route 0.260ns (61.343%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y34          FDRE                                         r  DiamondDisplay1/address_3_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y34          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_3_reg[5]/Q
+                         net (fo=1, routed)           0.260    -0.195    DiamondDisplay1/diamond_rom_3/Q[5]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[9])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.195    
+  -------------------------------------------------------------------
+                         slack                                  0.181    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_3_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[11]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.430ns  (logic 0.164ns (38.118%)  route 0.266ns (61.882%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.060ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.813ns
+    Source Clock Delay      (SCD):    -0.619ns
+    Clock Pessimism Removal (CPR):    -0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.562    -0.619    DiamondDisplay1/clk_pix
+    SLICE_X8Y35          FDRE                                         r  DiamondDisplay1/address_3_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y35          FDRE (Prop_fdre_C_Q)         0.164    -0.455 r  DiamondDisplay1/address_3_reg[7]/Q
+                         net (fo=1, routed)           0.266    -0.189    DiamondDisplay1/diamond_rom_3/Q[7]
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/ADDRARDADDR[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.876    -0.813    DiamondDisplay1/diamond_rom_3/clk_pix
+    RAMB18_X0Y14         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+                         clock pessimism              0.254    -0.559    
+    RAMB18_X0Y14         RAMB18E1 (Hold_ramb18e1_CLKARDCLK_ADDRARDADDR[11])
+                                                      0.183    -0.376    DiamondDisplay1/diamond_rom_3/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.376    
+                         arrival time                          -0.189    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.231ns  (arrival time - required time)
+  Source:                 DiamondDisplay1/address_2_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Destination:            DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRBWRADDR[8]
+                            (rising edge-triggered cell RAMB18E1 clocked by clk_pix_VGA_Clock  {rise@0.000ns fall@19.841ns period=39.683ns})
+  Path Group:             clk_pix_VGA_Clock
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_pix_VGA_Clock rise@0.000ns - clk_pix_VGA_Clock rise@0.000ns)
+  Data Path Delay:        0.468ns  (logic 0.141ns (30.100%)  route 0.327ns (69.900%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.054ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -0.812ns
+    Source Clock Delay      (SCD):    -0.592ns
+    Clock Pessimism Removal (CPR):    -0.274ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.667    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.360    -1.693 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.486    -1.207    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026    -1.181 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.589    -0.592    DiamondDisplay1/clk_pix
+    SLICE_X7Y36          FDRE                                         r  DiamondDisplay1/address_2_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y36          FDRE (Prop_fdre_C_Q)         0.141    -0.451 r  DiamondDisplay1/address_2_reg[4]/Q
+                         net (fo=1, routed)           0.327    -0.124    DiamondDisplay1/diamond_rom_1/dataout_reg_3[4]
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/ADDRBWRADDR[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pix_VGA_Clock rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  clk_100m (IN)
+                         net (fo=0)                   0.000     0.000    clk_100m
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  clk_100m_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.894    clock_pix_inst/inst/clk_100m
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.142    -2.248 r  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.530    -1.718    clock_pix_inst/inst/clk_pix_VGA_Clock
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029    -1.689 r  clock_pix_inst/inst/clkout1_buf/O
+                         net (fo=221, routed)         0.877    -0.812    DiamondDisplay1/diamond_rom_1/clk_pix
+    RAMB18_X0Y16         RAMB18E1                                     r  DiamondDisplay1/diamond_rom_1/dataout_reg/CLKBWRCLK
+                         clock pessimism              0.274    -0.538    
+    RAMB18_X0Y16         RAMB18E1 (Hold_ramb18e1_CLKBWRCLK_ADDRBWRADDR[8])
+                                                      0.183    -0.355    DiamondDisplay1/diamond_rom_1/dataout_reg
+  -------------------------------------------------------------------
+                         required time                          0.355    
+                         arrival time                          -0.124    
+  -------------------------------------------------------------------
+                         slack                                  0.231    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_pix_VGA_Clock
+Waveform(ns):       { 0.000 19.841 }
+Period(ns):         39.683
+Sources:            { clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         39.683      37.107     RAMB18_X0Y12     SpidermanDisplay/BeeVRom/dataout_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         39.683      37.107     RAMB18_X0Y16     DiamondDisplay1/diamond_rom_1/dataout_reg/CLKARDCLK
+Min Period        n/a     RAMB18E1/CLKBWRCLK  n/a            2.576         39.683      37.107     RAMB18_X0Y16     DiamondDisplay1/diamond_rom_1/dataout_reg/CLKBWRCLK
+Min Period        n/a     RAMB18E1/CLKARDCLK  n/a            2.576         39.683      37.107     RAMB18_X0Y14     DiamondDisplay1/diamond_rom_3/dataout_reg/CLKARDCLK
+Min Period        n/a     BUFG/I              n/a            2.155         39.683      37.527     BUFGCTRL_X0Y0    clock_pix_inst/inst/clkout1_buf/I
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         39.683      38.434     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X7Y26      SpidermanDisplay/BeeSpriteOn_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X2Y38      vga_b_reg[0]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X2Y38      vga_b_reg[1]/C
+Min Period        n/a     FDRE/C              n/a            1.000         39.683      38.683     SLICE_X2Y38      vga_b_reg[2]/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       39.683      173.677    MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_b_reg[3]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_g_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_g_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X4Y40      vga_r_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X4Y40      vga_r_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X8Y37      DiamondDisplay1/address_1_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X8Y37      DiamondDisplay1/address_1_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y37      DiamondDisplay1/address_1_reg[6]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y37      DiamondDisplay1/address_1_reg[7]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X5Y37      DiamondDisplay1/address_1_reg[8]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X7Y26      SpidermanDisplay/BeeSpriteOn_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y38      vga_b_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y38      vga_b_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y38      vga_b_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_b_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_g_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y40      vga_g_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y39      vga_g_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X2Y39      vga_g_reg[3]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         19.841      19.341     SLICE_X4Y40      vga_r_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_VGA_Clock
+  To Clock:  clkfbout_VGA_Clock
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack       47.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_VGA_Clock
+Waveform(ns):       { 0.000 25.000 }
+Period(ns):         50.000
+Sources:            { clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         50.000      47.845     BUFGCTRL_X0Y1    clock_pix_inst/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         50.000      48.751     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       50.000      50.000     MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       50.000      163.360    MMCME2_ADV_X1Y0  clock_pix_inst/inst/mmcm_adv_inst/CLKFBOUT
+
+
+

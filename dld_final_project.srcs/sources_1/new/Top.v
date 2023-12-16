@@ -47,6 +47,9 @@ module Top(
     wire vsync; 
     wire de;
     
+    wire[9:0] beeX;
+    wire[8:0] beeY;
+    
     wire [3:0] maze_red;
     wire [3:0] maze_blue;
     wire [3:0] maze_green;
@@ -60,63 +63,26 @@ module Top(
         .vsync(vsync),
         .de(de)
     );
-
-    maze_draw m1(
-        .clk_d(clk_pix),
-        .pixel_x(sx),
-        .pixel_y(sy),
-        .video_on(de),
-        .red(maze_red),
-        .green(maze_green),
-        .blue(maze_blue)
-    );
+      
     
     // Instantiate BeeSprite
-    wire [1:0] DiamondOn1;
-    wire [1:0] DiamondOn2;
-    wire [1:0] DiamondOn3;                 // 1=on, 0=off
-    wire [7:0] diamond_out_1;
-    wire [7:0] diamond_out_2;
-    wire [7:0] diamond_out_3;                        // pixel value from Bee.mem
-    Diamond DiamondDisplay1 (
-        .clk_pix(clk_pix),
-        .sx(sx),
-        .sy(sy),
-        .de(de),
-        .rstBtn(restart),
-        .diamond_on_1(DiamondOn1),
-        .diamond_on_2(DiamondOn2),
-        .diamond_on_3(DiamondOn3),
-        .dataout_1(diamond_out_1),
-        .dataout_2(diamond_out_2),
-        .dataout_3(diamond_out_3)
-    );
+//    wire [1:0] StartScreenOn;                 // 1=on, 0=off
+//    wire [7:0] ss;                        // pixel value from Bee.mem
+//    StartGame StartScreenDisplay (
+//        .clk_pix(clk_pix),
+//        .sx(sx),
+//        .sy(sy),
+//        .de(de),
+//        .screenOn(StartScreenOn),
+//        .dataout(ss)
+//    );
     
-    // Load colour palette
-    reg [7:0] diamond_palette [0:191];              // 8 bit values from the 192 hex entries in the colour palette
-    reg [7:0] COL2 = 0;                      // background colour palette value
-    initial begin
-        $readmemh("pal_diamond.mem", diamond_palette); // load 192 hex values into "palette"
-    end  
-    
-    // Instantiate BeeSprite
-    wire [1:0] StartScreenOn;                 // 1=on, 0=off
-    wire [7:0] ss;                        // pixel value from Bee.mem
-    StartGame StartScreenDisplay (
-        .clk_pix(clk_pix),
-        .sx(sx),
-        .sy(sy),
-        .de(de),
-        .screenOn(StartScreenOn),
-        .dataout(ss)
-    );
-    
-    // Load colour palette
-    reg [7:0] start_screen_palette [0:191];              // 8 bit values from the 192 hex entries in the colour palette
-//    reg [7:0] COL = 0;                      // background colour palette value
-    initial begin
-        $readmemh("pal_start_game_screen.mem", start_screen_palette); // load 192 hex values into "palette"
-    end   
+//    // Load colour palette
+//    reg [7:0] start_screen_palette [0:191];              // 8 bit values from the 192 hex entries in the colour palette
+////    reg [7:0] COL = 0;                      // background colour palette value
+//    initial begin
+//        $readmemh("pal_start_game_screen.mem", start_screen_palette); // load 192 hex values into "palette"
+//    end   
     
     
     // Instantiate BeeSprite
@@ -133,7 +99,21 @@ module Top(
         .btnD(btnD),
         .rstBtn(restart),
         .BeeSpriteOn(BeeSpriteOn),
-        .dataout(dout)
+        .dataout(dout),
+        .BeesX(beeX),
+        .BeesY(beeY) 
+    );
+    
+    maze_draw m1(
+        .clk_d(clk_pix),
+        .pixel_x(sx),
+        .pixel_y(sy),
+        .video_on(de),
+        .BeesX(beeX),
+        .BeesY(beeY),
+        .red(maze_red),
+        .green(maze_green),
+        .blue(maze_blue)
     );
     
     // Load colour palette
@@ -142,6 +122,36 @@ module Top(
     initial begin
         $readmemh("pal_spiderman.mem", palette); // load 192 hex values into "palette"
     end   
+    
+    // Instantiate BeeSprite
+    wire [1:0] DiamondOn1;
+    wire [1:0] DiamondOn2;
+    wire [1:0] DiamondOn3;                 // 1=on, 0=off
+    wire [7:0] diamond_out_1;
+    wire [7:0] diamond_out_2;
+    wire [7:0] diamond_out_3;                        // pixel value from Bee.mem
+    Diamond DiamondDisplay1 (
+        .clk_pix(clk_pix),
+        .sx(sx),
+        .sy(sy),
+        .de(de),
+        .rstBtn(restart),
+        .BeesX(beeX),
+        .BeesY(beeY),
+        .diamond_on_1(DiamondOn1),
+        .diamond_on_2(DiamondOn2),
+        .diamond_on_3(DiamondOn3),
+        .dataout_1(diamond_out_1),
+        .dataout_2(diamond_out_2),
+        .dataout_3(diamond_out_3)
+    );
+    
+    // Load colour palette
+    reg [7:0] diamond_palette [0:191];              // 8 bit values from the 192 hex entries in the colour palette
+    reg [7:0] COL2 = 0;                      // background colour palette value
+    initial begin
+        $readmemh("pal_diamond.mem", diamond_palette); // load 192 hex values into "palette"
+    end
     
     // VGA Output
     always @ (posedge clk_pix)
@@ -179,12 +189,12 @@ module Top(
                             vga_g <= maze_green;
                             vga_b <= maze_blue;
                         end
-                else
-                    begin
-                            vga_r <= (start_screen_palette[(ss*3)])>>4;
-                            vga_g <= (start_screen_palette[(ss*3)+1])>>4;  // GREEN bits(7:4) from colour palette
-                            vga_b <= (start_screen_palette[(ss*3)+2])>>4;
-                    end
+//                else
+//                    begin
+//                            vga_r <= (start_screen_palette[(ss*3)])>>4;
+//                            vga_g <= (start_screen_palette[(ss*3)+1])>>4;  // GREEN bits(7:4) from colour palette
+//                            vga_b <= (start_screen_palette[(ss*3)+2])>>4;
+//                    end
             end
         else
             begin

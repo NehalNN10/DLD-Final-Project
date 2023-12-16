@@ -15,6 +15,8 @@ module Diamond(
     input wire [9:0] sy,
     input wire de,
     input wire rstBtn,
+    input wire BeesX,
+    input wire BeesY,
     output reg [1:0] diamond_on_1, // 1=on, 0=off
     output reg [1:0] diamond_on_2,
     output reg [1:0] diamond_on_3,
@@ -53,6 +55,7 @@ module Diamond(
     .out(restart)
     );
     
+    wire square = ((sx-BeesX-10)*(sx-BeesX-10) + (sy-BeesY-10)*(sy-BeesY-10))<=3600;
     
     // setup character positions and sizes
     reg [9:0] diamond_one_x = 300; // Bee X start position

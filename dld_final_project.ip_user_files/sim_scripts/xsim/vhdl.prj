@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd" \
+
+nosort
