@@ -45,13 +45,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="3"/>
-    <Option Name="WTModelSimExportSim" Val="3"/>
-    <Option Name="WTQuestaExportSim" Val="3"/>
-    <Option Name="WTIesExportSim" Val="3"/>
-    <Option Name="WTVcsExportSim" Val="3"/>
-    <Option Name="WTRivieraExportSim" Val="3"/>
-    <Option Name="WTActivehdlExportSim" Val="3"/>
+    <Option Name="WTXSimExportSim" Val="4"/>
+    <Option Name="WTModelSimExportSim" Val="4"/>
+    <Option Name="WTQuestaExportSim" Val="4"/>
+    <Option Name="WTIesExportSim" Val="4"/>
+    <Option Name="WTVcsExportSim" Val="4"/>
+    <Option Name="WTRivieraExportSim" Val="4"/>
+    <Option Name="WTActivehdlExportSim" Val="4"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -338,106 +338,87 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/counter3bit.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_physopt.dcp">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/counter3bit.v">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/mux4_4bus.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_opt.dcp">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/decoder3_8.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/mux4_4bus.v">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_routed.dcp">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_opt.dcp">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/segClkDevider.v">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_placed.dcp">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/sevensegdecoder.v">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_routed.dcp">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/decoder3_8.v">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/DigitToSeg.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_placed.dcp">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/XADCdemo.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.runs/synth_1/XADCdemo.dcp">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/DigitToSeg.v">
-        <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/XADCdemo.v">
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/sevensegdecoder.v">
         <FileInfo>
-          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/segClkDevider.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_physopt.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -497,8 +478,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/constrs_1/imports/constraints/Basys3_Master.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/dungeon_display/new/before_joystick.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/dungeon_display/new/Basys3.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/dungeon_display/new/before_joystick.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>

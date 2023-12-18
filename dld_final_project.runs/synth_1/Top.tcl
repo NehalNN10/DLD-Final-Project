@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -90,6 +86,14 @@ set_property ip_output_repo c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuf
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_opt.dcp
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_opt.dcp]
+add_files -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_placed.dcp
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_placed.dcp]
+add_files -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_routed.dcp
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_routed.dcp]
+add_files -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_physopt.dcp
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.runs/impl_1/XADCdemo_physopt.dcp]
 read_mem {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/maze.mem
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/pal24bit.mem
@@ -134,8 +138,19 @@ read_verilog -library xil_defaultlib {
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/SpiderROM.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/Diamond.v
   C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/new/DiamondRom.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/counter3bit.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/mux4_4bus.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/decoder3_8.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/DigitToSeg.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/XADCdemo.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/sevensegdecoder.v
+  C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/segClkDevider.v
 }
-read_vhdl -library xil_defaultlib {{C:/Users/Dell/Desktop/joystick stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd}}
+read_vhdl -library xil_defaultlib C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/imports/hdl/UART_TX_CTRL.vhd
+read_ip -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xdc]
+
 read_ip -quiet C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xci
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/sources_1/ip/VGA_Clock/VGA_Clock.xdc]
@@ -157,6 +172,14 @@ set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni
 read_xdc C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/dungeon_display/new/Basys3.xdc
 set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/dungeon_display/new/Basys3.xdc]
 
+read_xdc C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/constrs_1/imports/constraints/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/joystick_stuff/Basys3-Joystick-Interfacing/test.srcs/constrs_1/imports/constraints/Basys3_Master.xdc]
+
+read_xdc C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/dungeon_display/new/before_joystick.xdc
+set_property used_in_implementation false [get_files C:/Users/Dell/Documents/uni_docs/cs/dld/project_stuff/dld_final_project/dld_final_project.srcs/dungeon_display/new/before_joystick.xdc]
+
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
